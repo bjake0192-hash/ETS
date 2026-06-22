@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import { 
   Building2, 
   Factory, 
@@ -11,6 +12,8 @@ import {
   ShieldAlert, 
   Network 
 } from "lucide-react";
+import Reveal from "@/components/ui/Reveal";
+import { fadeUp, staggerContainer, viewportOnce } from "@/lib/motion";
 
 const services = [
   {
@@ -57,40 +60,59 @@ const services = [
 
 export default function ServicesGrid() {
   return (
-    <section id="services" className="py-24 bg-background">
-      <div className="container mx-auto px-6 text-center mb-16">
+    <section id="services" className="py-28 bg-background relative overflow-hidden">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/30 to-transparent" />
+      <Reveal className="container mx-auto px-6 text-center mb-16">
         <span className="text-electric-yellow font-black tracking-widest uppercase text-sm mb-4 block">
           OUR CORE CAPABILITIES
         </span>
-        <h2 className="text-4xl md:text-5xl font-black text-navy-900 mb-6">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-navy-900 mb-6 tracking-[-0.03em]">
           ENGINEERING EXCELLENCE
         </h2>
-        <div className="w-24 h-1 bg-electric-yellow mx-auto" />
-      </div>
+        <p className="max-w-2xl mx-auto text-navy-900/65 leading-relaxed">
+          Designed to feel premium and dependable, every service line is delivered with engineering rigor,
+          compliance discipline, and a finish that reflects the ETS standard.
+        </p>
+        <div className="w-24 h-1 bg-electric-yellow mx-auto mt-6" />
+      </Reveal>
 
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              className="group p-8 rounded-2xl bg-[#fbf8f4] border border-navy-900/10 hover:border-electric-yellow/60 transition-all hover:-translate-y-2"
+              variants={fadeUp}
+              className="group relative p-8 rounded-[2rem] surface-card border border-white/50 hover:border-electric-yellow/55 transition-all hover:-translate-y-3"
             >
-              <div className="mb-6 bg-navy-900/5 w-14 h-14 rounded-xl flex items-center justify-center group-hover:bg-electric-yellow transition-colors">
-                <service.icon className="text-electric-yellow group-hover:text-navy-900 transition-colors" size={28} />
+              <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="mb-6 bg-navy-900/5 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-electric-yellow transition-colors shadow-inner">
+                <service.icon className="text-electric-yellow group-hover:text-white transition-colors" size={30} />
               </div>
-              <h3 className="text-xl font-bold text-navy-900 mb-3 tracking-tight">
-                {service.title}
-              </h3>
+              <div className="flex items-start justify-between gap-4 mb-3">
+                <h3 className="text-xl font-bold text-navy-900 tracking-tight">
+                  {service.title}
+                </h3>
+                <ArrowUpRight
+                  size={18}
+                  className="text-navy-900/35 group-hover:text-electric-yellow group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
+                />
+              </div>
               <p className="text-navy-900/60 text-sm leading-relaxed">
                 {service.description}
               </p>
+              <div className="mt-6 h-px w-full bg-gradient-to-r from-electric-yellow/0 via-electric-yellow/30 to-electric-yellow/0 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <p className="mt-6 text-xs font-bold uppercase tracking-[0.22em] text-navy-900/35">
+                Precision Delivery
+              </p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

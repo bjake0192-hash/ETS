@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Reveal from "@/components/ui/Reveal";
+import { fadeUp, staggerContainer, viewportOnce } from "@/lib/motion";
 
 const stats = [
   { label: "Years Experience", value: "25+" },
@@ -34,19 +36,24 @@ const accreditations = [
 
 export default function Stats() {
   return (
-    <section className="py-24 bg-background border-t border-navy-900/10">
+    <section className="py-28 bg-background border-t border-navy-900/10 relative overflow-hidden">
+      <div className="absolute left-[10%] top-10 h-52 w-52 rounded-full bg-electric-yellow/8 blur-3xl" />
       <div className="container mx-auto px-6">
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 mb-24">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24"
+        >
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="text-center"
+              variants={fadeUp}
+              className="surface-card rounded-[2rem] border border-white/45 p-8 text-center"
             >
-              <p className="text-6xl md:text-7xl font-black text-navy-900 mb-2 tracking-tighter">
+              <p className="text-5xl md:text-6xl font-black text-navy-900 mb-3 tracking-tighter">
                 {stat.value}
               </p>
               <p className="text-electric-yellow font-black tracking-widest uppercase text-xs">
@@ -54,10 +61,10 @@ export default function Stats() {
               </p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Accreditations */}
-        <div className="pt-16 border-t border-navy-900/10">
+        <Reveal className="pt-16 border-t border-navy-900/10">
           <p className="text-center text-navy-900/50 font-bold tracking-widest uppercase text-xs mb-12">
             CERTIFIED & ACCREDITED BY
           </p>
@@ -71,7 +78,7 @@ export default function Stats() {
                 transition={{ delay: index * 0.1 }}
                 className="flex flex-col items-center group"
               >
-                <div className={`${brand.width} h-16 relative flex items-center justify-center`}>
+                <div className={`${brand.width} h-20 relative flex items-center justify-center surface-card rounded-3xl border border-white/45 px-6`}>
                   <img 
                     src={brand.src} 
                     alt={`${brand.name} Accreditation`}
@@ -81,7 +88,7 @@ export default function Stats() {
               </motion.div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
