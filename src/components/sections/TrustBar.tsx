@@ -28,7 +28,7 @@ const trustItems = [
 
 export default function TrustBar() {
   return (
-    <section className="bg-white border-y border-navy-900/10 py-12">
+    <section className="bg-background border-y border-navy-900/10 py-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {trustItems.map((item, index) => (

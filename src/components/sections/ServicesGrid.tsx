@@ -57,7 +57,7 @@ const services = [
 
 export default function ServicesGrid() {
   return (
-    <section id="services" className="py-24 bg-white">
+    <section id="services" className="py-24 bg-background">
       <div className="container mx-auto px-6 text-center mb-16">
         <span className="text-electric-yellow font-black tracking-widest uppercase text-sm mb-4 block">
           OUR CORE CAPABILITIES
@@ -77,7 +77,7 @@ export default function ServicesGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="group p-8 rounded-2xl bg-white border border-navy-900/10 hover:border-electric-yellow/60 transition-all hover:-translate-y-2"
+              className="group p-8 rounded-2xl bg-[#fbf8f4] border border-navy-900/10 hover:border-electric-yellow/60 transition-all hover:-translate-y-2"
             >
               <div className="mb-6 bg-navy-900/5 w-14 h-14 rounded-xl flex items-center justify-center group-hover:bg-electric-yellow transition-colors">
                 <service.icon className="text-electric-yellow group-hover:text-navy-900 transition-colors" size={28} />

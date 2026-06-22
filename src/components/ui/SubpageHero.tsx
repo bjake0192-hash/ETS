@@ -18,7 +18,7 @@ export default function SubpageHero({ title, subtitle, imagePrompt }: SubpageHer
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${imageUrl}')` }}
         />
-        <div className="absolute inset-0 bg-white/85" />
+        <div className="absolute inset-0 bg-background/85" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">

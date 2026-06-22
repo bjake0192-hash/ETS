@@ -19,7 +19,7 @@ export default function ServicesPage() {
       <ServicesGrid />
       
       {/* Detailed Service Breakdown Section */}
-      <section className="py-24 bg-white border-t border-navy-900/10">
+      <section className="py-24 bg-background border-t border-navy-900/10">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
             <div>

@@ -21,7 +21,7 @@ const sectors = [
 
 export default function Sectors() {
   return (
-    <section id="sectors" className="py-24 bg-white overflow-hidden">
+    <section id="sectors" className="py-24 bg-background overflow-hidden">
       <div className="container mx-auto px-6 text-center mb-16">
         <span className="text-electric-yellow font-black tracking-widest uppercase text-sm mb-4 block">
           INDUSTRIES WE SERVE
@@ -40,7 +40,7 @@ export default function Sectors() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="group p-8 rounded-xl bg-white border border-navy-900/10 flex flex-col items-center justify-center text-center hover:bg-electric-yellow transition-all duration-300"
+              className="group p-8 rounded-xl bg-[#fbf8f4] border border-navy-900/10 flex flex-col items-center justify-center text-center hover:bg-electric-yellow transition-all duration-300"
             >
               <sector.icon 
                 size={32} 

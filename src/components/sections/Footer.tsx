@@ -26,7 +26,7 @@ export function Footer() {
   const icons = [Globe, Mail, Share2];
 
   return (
-    <footer className="bg-white pt-24 pb-12 border-t border-navy-900/10">
+    <footer className="bg-background pt-24 pb-12 border-t border-navy-900/10">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           {/* Brand Col */}
@@ -98,7 +98,7 @@ export function Footer() {
             <h4 className="text-navy-900 font-black uppercase tracking-widest text-xs mb-8">Accreditations</h4>
             <div className="grid grid-cols-2 gap-4">
               {accreditations.map((brand) => (
-                <div key={brand.name} className="h-12 bg-white rounded border border-navy-900/10 flex items-center justify-center p-2 group hover:border-electric-yellow transition-colors">
+                <div key={brand.name} className="h-12 bg-[#fbf8f4] rounded border border-navy-900/10 flex items-center justify-center p-2 group hover:border-electric-yellow transition-colors">
                   <img 
                     src={brand.src} 
                     alt={brand.name} 

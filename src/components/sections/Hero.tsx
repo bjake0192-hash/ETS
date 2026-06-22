@@ -18,8 +18,8 @@ export default function Hero() {
             animation: 'ken-burns 20s infinite alternate'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
-        <div className="absolute inset-0 bg-white/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
+        <div className="absolute inset-0 bg-background/40" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -42,7 +42,7 @@ export default function Hero() {
             <div className="flex flex-wrap gap-4">
               <Link 
                 href="#services"
-                className="group bg-electric-yellow text-navy-900 px-8 py-4 rounded font-black flex items-center gap-2 hover:bg-white transition-all transform hover:-translate-y-1"
+                className="group bg-electric-yellow text-white px-8 py-4 rounded font-black flex items-center gap-2 hover:bg-charcoal-800 transition-all transform hover:-translate-y-1"
               >
                 OUR SERVICES
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />

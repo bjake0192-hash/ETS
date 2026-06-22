@@ -19,7 +19,7 @@ export default function AboutPage() {
       />
       <About />
       <Stats />
-      <div className="bg-white py-24 border-t border-navy-900/10">
+      <div className="bg-background py-24 border-t border-navy-900/10">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>

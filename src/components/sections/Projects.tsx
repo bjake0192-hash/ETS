@@ -32,7 +32,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 bg-white">
+    <section id="projects" className="py-24 bg-background">
       <div className="container mx-auto px-6 mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
         <div className="max-w-2xl">
           <span className="text-electric-yellow font-black tracking-widest uppercase text-sm mb-4 block">

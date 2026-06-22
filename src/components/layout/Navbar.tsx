@@ -30,8 +30,8 @@ export default function Navbar() {
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
         isScrolled
-          ? "bg-white/90 backdrop-blur-md py-4 border-b border-navy-900/10"
-          : "bg-white/70 backdrop-blur-sm py-6"
+          ? "bg-background/95 backdrop-blur-md py-4 border-b border-navy-900/10"
+          : "bg-background/80 backdrop-blur-sm py-6"
       )}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
@@ -56,7 +56,7 @@ export default function Navbar() {
           ))}
           <Link
             href="#contact"
-            className="bg-electric-yellow text-navy-900 px-6 py-2.5 rounded font-bold text-sm hover:bg-white transition-colors"
+            className="bg-electric-yellow text-white px-6 py-2.5 rounded font-bold text-sm hover:bg-charcoal-800 transition-colors"
           >
             Get a Quote
           </Link>
@@ -73,7 +73,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-navy-900/10 py-6 px-6 flex flex-col gap-4 animate-in fade-in slide-in-from-top-4">
+        <div className="md:hidden absolute top-full left-0 w-full bg-background border-b border-navy-900/10 py-6 px-6 flex flex-col gap-4 animate-in fade-in slide-in-from-top-4">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -87,7 +87,7 @@ export default function Navbar() {
           <Link
             href="#contact"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="bg-electric-yellow text-navy-900 px-6 py-3 rounded font-bold text-center mt-2"
+            className="bg-electric-yellow text-white px-6 py-3 rounded font-bold text-center mt-2"
           >
             Get a Quote
           </Link>

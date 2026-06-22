@@ -19,7 +19,7 @@ export default function SectorsPage() {
       <Sectors />
       
       {/* Sector Deep Dive */}
-      <section className="py-24 bg-white border-t border-navy-900/10">
+      <section className="py-24 bg-background border-t border-navy-900/10">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
              {[
@@ -36,7 +36,7 @@ export default function SectorsPage() {
                  desc: "Trusted partners for healthcare and education infrastructure across the UK." 
                }
              ].map((sector, i) => (
-               <div key={i} className="p-10 rounded-2xl bg-white border border-navy-900/10 hover:border-electric-yellow/30 transition-all">
+               <div key={i} className="p-10 rounded-2xl bg-[#fbf8f4] border border-navy-900/10 hover:border-electric-yellow/30 transition-all">
                   <h4 className="text-electric-yellow font-black uppercase tracking-widest text-xs mb-4">{sector.title}</h4>
                   <p className="text-navy-900/70 leading-relaxed">{sector.desc}</p>
                </div>

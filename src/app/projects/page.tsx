@@ -20,7 +20,7 @@ export default function ProjectsPage() {
       <Stats />
       
       {/* Capability Statement Section */}
-      <section className="py-24 bg-white border-t border-navy-900/10 overflow-hidden">
+      <section className="py-24 bg-background border-t border-navy-900/10 overflow-hidden">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-5xl md:text-7xl font-black text-navy-900 mb-8 tracking-tighter opacity-5 select-none uppercase">Scale & Authority</h2>
           <div className="max-w-3xl mx-auto -mt-12 md:-mt-16">

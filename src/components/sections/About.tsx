@@ -15,7 +15,7 @@ export default function About() {
   const aboutImage = "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=industrial%20electrical%20control%20room%20commercial%20power%20distribution%20modern%20high-tech&image_size=square_hd";
 
   return (
-    <section id="about" className="py-24 bg-white overflow-hidden">
+    <section id="about" className="py-24 bg-background overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           {/* Image Side */}
@@ -36,7 +36,7 @@ export default function About() {
             <div className="absolute -top-6 -left-6 w-32 h-32 bg-electric-yellow/20 rounded-full blur-3xl z-0" />
             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-electric-yellow/10 rounded-full blur-3xl z-0" />
             
-            <div className="absolute bottom-8 right-8 bg-white border border-navy-900/10 p-6 rounded-xl shadow-2xl z-20 hidden md:block">
+            <div className="absolute bottom-8 right-8 bg-[#fbf8f4] border border-navy-900/10 p-6 rounded-xl shadow-2xl z-20 hidden md:block">
               <p className="text-4xl font-black text-electric-yellow mb-1">25+</p>
               <p className="text-sm font-bold text-navy-900 tracking-wider uppercase">Years Experience</p>
             </div>
