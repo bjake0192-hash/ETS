@@ -76,7 +76,7 @@ export default function Navbar() {
             ))}
             <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
               <Link
-                href="#contact"
+                href="/contact"
                 className="bg-electric-yellow text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-charcoal-800 transition-colors shadow-[0_14px_32px_rgba(168,97,38,0.22)]"
               >
                 Get a Quote
@@ -122,7 +122,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="#contact"
+                href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="bg-electric-yellow text-white px-6 py-3 rounded-2xl font-bold text-center mt-2"
               >

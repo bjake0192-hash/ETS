@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
+import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
 
 export default function CTA() {
@@ -34,14 +35,15 @@ export default function CTA() {
             </p>
             
             <div className="flex flex-wrap gap-6 relative z-10">
-              <motion.button
-                whileHover={{ y: -4, scale: 1.01 }}
-                whileTap={{ scale: 0.98 }}
-                className="bg-electric-yellow text-white px-10 py-5 rounded-full font-black flex items-center gap-3 hover:bg-charcoal-800 transition-all shadow-2xl shadow-electric-yellow/20"
-              >
-                START A CONVERSATION
-                <ArrowRight size={20} />
-              </motion.button>
+              <motion.div whileHover={{ y: -4, scale: 1.01 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  href="/contact"
+                  className="bg-electric-yellow text-white px-10 h-14 rounded-full font-black inline-flex items-center gap-3 hover:bg-charcoal-800 transition-all shadow-2xl shadow-electric-yellow/20 whitespace-nowrap"
+                >
+                  START A CONVERSATION
+                  <ArrowRight size={20} />
+                </Link>
+              </motion.div>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-navy-900/5 flex items-center justify-center border border-navy-900/10">
                   <Phone size={20} className="text-electric-yellow" />

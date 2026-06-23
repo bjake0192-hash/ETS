@@ -71,7 +71,7 @@ export default function About() {
 
             <motion.div whileHover={{ x: 6 }}>
               <Link 
-                href="#contact"
+                href="/about"
                 className="inline-flex items-center gap-2 text-electric-yellow font-black tracking-wider uppercase hover:text-navy-900 transition-colors group"
               >
                 Learn More About Our Capability
