@@ -57,51 +57,53 @@ export default function Hero() {
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          className="max-w-4xl"
+          className="w-full"
         >
-          <motion.h1
-            variants={fadeUp}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.6rem] xl:text-[5.2rem] font-black text-navy-900 leading-[0.9] tracking-[-0.04em] mb-6"
-          >
-            COMMERCIAL <br />
-            <span className="text-electric-yellow">ELECTRICAL</span> <br />
-            SPECIALISTS
-          </motion.h1>
-          <motion.p
-            variants={fadeUp}
-            className="text-lg md:text-xl text-navy-900/70 max-w-2xl mb-8 leading-relaxed"
-          >
-            Delivering high-end electrical engineering and infrastructure solutions
-            for the UK's most demanding commercial and industrial environments.
-          </motion.p>
+          <div className="max-w-4xl">
+            <motion.h1
+              variants={fadeUp}
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.6rem] xl:text-[5.2rem] font-black text-navy-900 leading-[0.9] tracking-[-0.04em] mb-6"
+            >
+              COMMERCIAL <br />
+              <span className="text-electric-yellow">ELECTRICAL</span> <br />
+              SPECIALISTS
+            </motion.h1>
+            <motion.p
+              variants={fadeUp}
+              className="text-lg md:text-xl text-navy-900/70 max-w-2xl mb-8 leading-relaxed"
+            >
+              Delivering high-end electrical engineering and infrastructure solutions
+              for the UK's most demanding commercial and industrial environments.
+            </motion.p>
 
-          <motion.div variants={fadeUp} className="flex flex-wrap gap-4 items-stretch">
-            <motion.div whileHover={{ y: -4 }} whileTap={{ scale: 0.98 }}>
-              <Link
-                href="/services"
-                className="group bg-electric-yellow text-white px-8 h-14 rounded-full font-black inline-flex items-center justify-center gap-2 hover:bg-charcoal-800 transition-all shadow-[0_18px_40px_rgba(168,97,38,0.24)] whitespace-nowrap"
-              >
-                OUR SERVICES
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
+            <motion.div variants={fadeUp} className="flex flex-wrap gap-4 items-stretch">
+              <motion.div whileHover={{ y: -4 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  href="/services"
+                  className="group bg-electric-yellow text-white px-8 h-14 rounded-full font-black inline-flex items-center justify-center gap-2 hover:bg-charcoal-800 transition-all shadow-[0_18px_40px_rgba(168,97,38,0.24)] whitespace-nowrap"
+                >
+                  OUR SERVICES
+                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ y: -4 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  href="/projects"
+                  className="surface-card px-8 h-14 rounded-full border border-navy-900/15 text-navy-900 font-black hover:bg-navy-900/5 transition-all inline-flex items-center justify-center whitespace-nowrap"
+                >
+                  VIEW PROJECTS
+                </Link>
+              </motion.div>
             </motion.div>
-            <motion.div whileHover={{ y: -4 }} whileTap={{ scale: 0.98 }}>
-              <Link
-                href="/projects"
-                className="surface-card px-8 h-14 rounded-full border border-navy-900/15 text-navy-900 font-black hover:bg-navy-900/5 transition-all inline-flex items-center justify-center whitespace-nowrap"
-              >
-                VIEW PROJECTS
-              </Link>
-            </motion.div>
-          </motion.div>
+          </div>
 
-          <motion.div variants={fadeUp} className="mt-10 max-w-3xl">
-            <div className="surface-card border border-white/50 rounded-[2rem] px-6 py-5">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-xs font-bold uppercase tracking-[0.28em] text-navy-900/55">
+          <div className="mt-10 w-full">
+            <div className="surface-card border border-white/50 rounded-[2rem] px-6 sm:px-10 py-6">
+              <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+                <p className="text-xs font-bold uppercase tracking-[0.28em] text-navy-900/55 whitespace-nowrap">
                   Certified & Accredited
                 </p>
-                <div className="flex flex-wrap items-center gap-x-10 gap-y-4">
+                <div className="flex flex-wrap items-center gap-x-10 gap-y-4 md:justify-end">
                   {certifications.map((brand) => (
                     <div key={brand.name} className="h-10 flex items-center">
                       <img
@@ -114,7 +116,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
 
