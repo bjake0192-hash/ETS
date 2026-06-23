@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
@@ -42,16 +42,9 @@ export default function Hero() {
             animate="visible"
             className="max-w-4xl"
           >
-            <motion.div
-              variants={fadeUp}
-              className="inline-flex items-center gap-3 rounded-full border border-white/50 surface-card px-4 py-2 mb-6 text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-navy-900/75"
-            >
-              <Sparkles size={16} className="text-electric-yellow" />
-              Electro Technical Systems
-            </motion.div>
             <motion.h1
               variants={fadeUp}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] xl:text-[6.3rem] font-black text-navy-900 leading-[0.88] tracking-[-0.04em] mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.6rem] xl:text-[5.2rem] font-black text-navy-900 leading-[0.9] tracking-[-0.04em] mb-6"
             >
               COMMERCIAL <br />
               <span className="text-electric-yellow">ELECTRICAL</span> <br />
