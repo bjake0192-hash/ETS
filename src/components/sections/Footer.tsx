@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, MapPin, Globe, Share2 } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
 
 const accreditations = [
@@ -23,8 +23,6 @@ const accreditations = [
 ];
 
 export function Footer() {
-  const icons = [Globe, Mail, Share2];
-
   return (
     <footer className="bg-background pt-24 pb-12 border-t border-navy-900/10">
       <div className="container mx-auto px-6">
@@ -42,13 +40,6 @@ export function Footer() {
               Premium commercial electrical contractors delivering engineering 
               excellence across the UK. Established expertise, modern solutions.
             </p>
-            <div className="flex gap-4">
-              {icons.map((Icon, i) => (
-                <Link key={i} href="#" className="w-10 h-10 rounded-full bg-navy-900/5 flex items-center justify-center text-navy-900/50 hover:text-electric-yellow hover:bg-navy-900/10 transition-all">
-                  <Icon size={20} />
-                </Link>
-              ))}
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -115,8 +106,8 @@ export function Footer() {
             © {new Date().getFullYear()} Electro Technical Systems (ETS) Ltd. All Rights Reserved.
           </p>
           <div className="flex gap-8">
-            <Link href="#" className="text-navy-900/40 hover:text-navy-900 text-xs font-bold transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-navy-900/40 hover:text-navy-900 text-xs font-bold transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="text-navy-900/40 hover:text-navy-900 text-xs font-bold transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="text-navy-900/40 hover:text-navy-900 text-xs font-bold transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

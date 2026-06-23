@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/motion";
 
@@ -49,9 +50,12 @@ export default function Projects() {
             and richer hover interactions to better sell capability and scale.
           </p>
         </div>
-        <button className="text-navy-900 font-black tracking-widest uppercase text-sm border-b-2 border-electric-yellow pb-1 hover:text-electric-yellow transition-colors">
+        <Link
+          href="/projects"
+          className="text-navy-900 font-black tracking-widest uppercase text-sm border-b-2 border-electric-yellow pb-1 hover:text-electric-yellow transition-colors"
+        >
           View All Projects
-        </button>
+        </Link>
       </Reveal>
 
       <div className="container mx-auto px-6">
