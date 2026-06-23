@@ -9,7 +9,7 @@ export default function Hero() {
   const heroImage = "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20commercial%20building%20electrical%20infrastructure%20high-end%20architecture%20bright%20daylight%20clean%20minimal&image_size=landscape_16_9";
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-28 pb-18">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-36 sm:pt-40 pb-24">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <div 
@@ -58,11 +58,11 @@ export default function Hero() {
               for the UK's most demanding commercial and industrial environments.
             </motion.p>
             
-            <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
+            <motion.div variants={fadeUp} className="flex flex-wrap gap-4 items-stretch">
               <motion.div whileHover={{ y: -4 }} whileTap={{ scale: 0.98 }}>
                 <Link 
-                  href="#services"
-                  className="group bg-electric-yellow text-white px-8 py-4 rounded-full font-black flex items-center gap-2 hover:bg-charcoal-800 transition-all shadow-[0_18px_40px_rgba(168,97,38,0.24)]"
+                  href="/services"
+                  className="group bg-electric-yellow text-white px-8 h-14 rounded-full font-black inline-flex items-center justify-center gap-2 hover:bg-charcoal-800 transition-all shadow-[0_18px_40px_rgba(168,97,38,0.24)] whitespace-nowrap"
                 >
                   OUR SERVICES
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -70,8 +70,8 @@ export default function Hero() {
               </motion.div>
               <motion.div whileHover={{ y: -4 }} whileTap={{ scale: 0.98 }}>
                 <Link 
-                  href="#projects"
-                  className="surface-card px-8 py-4 rounded-full border border-navy-900/15 text-navy-900 font-black hover:bg-navy-900/5 transition-all"
+                  href="/projects"
+                  className="surface-card px-8 h-14 rounded-full border border-navy-900/15 text-navy-900 font-black hover:bg-navy-900/5 transition-all inline-flex items-center justify-center whitespace-nowrap"
                 >
                   VIEW PROJECTS
                 </Link>
