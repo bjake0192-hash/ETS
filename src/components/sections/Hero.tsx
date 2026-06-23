@@ -7,9 +7,27 @@ import { fadeUp, staggerContainer } from "@/lib/motion";
 
 export default function Hero() {
   const heroImage = "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20commercial%20building%20electrical%20infrastructure%20high-end%20architecture%20bright%20daylight%20clean%20minimal&image_size=landscape_16_9";
+  const certifications = [
+    {
+      name: "NICEIC",
+      src: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=NICEIC%20accreditation%20logo%20professional%20electrical%20safety%20white%20background&image_size=square",
+    },
+    {
+      name: "CHAS",
+      src: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=CHAS%20accreditation%20logo%20health%20and%20safety%20white%20background&image_size=square",
+    },
+    {
+      name: "SafeContractor",
+      src: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=SafeContractor%20accreditation%20logo%20professional%20standards%20white%20background&image_size=square",
+    },
+    {
+      name: "Constructionline",
+      src: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Constructionline%20accreditation%20logo%20industry%20standard%20white%20background&image_size=square",
+    },
+  ];
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-36 sm:pt-40 pb-24">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-36 sm:pt-40 pb-36">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <div 
@@ -138,7 +156,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block"
+        className="absolute bottom-32 left-1/2 -translate-x-1/2 hidden md:block"
       >
         <div className="w-6 h-10 border-2 border-navy-900/20 rounded-full flex justify-center p-2">
           <motion.div 
@@ -146,6 +164,34 @@ export default function Hero() {
             transition={{ repeat: Infinity, duration: 1.5 }}
             className="w-1 h-2 bg-electric-yellow rounded-full"
           />
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.65, duration: 0.7, ease: "easeOut" }}
+        className="absolute bottom-0 left-0 w-full"
+      >
+        <div className="container mx-auto px-6 pb-8">
+          <div className="surface-card border border-white/50 rounded-[2rem] px-6 py-5">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-navy-900/55">
+                Certified & Accredited
+              </p>
+              <div className="flex flex-wrap items-center gap-x-10 gap-y-4">
+                {certifications.map((brand) => (
+                  <div key={brand.name} className="h-10 flex items-center">
+                    <img
+                      src={brand.src}
+                      alt={brand.name}
+                      className="h-10 w-auto object-contain filter grayscale opacity-70"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </motion.div>
 
