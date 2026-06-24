@@ -11,25 +11,25 @@ const projects = [
     title: "Global HQ Office Fit-out",
     location: "Central London",
     type: "Commercial Installation",
-    image: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20corporate%20office%20lighting%20installation%20commercial&image_size=landscape_4_3"
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop"
   },
   {
     title: "Logistics Hub Power Grid",
     location: "Manchester Gateway",
     type: "Industrial Infrastructure",
-    image: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=industrial%20warehouse%20electrical%20infrastructure%20large%20scale&image_size=landscape_4_3"
+    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop"
   },
   {
     title: "Advanced Research Facility",
     location: "Cambridge Science Park",
     type: "Specialist Engineering",
-    image: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=hospital%20electrical%20systems%20healthcare%20engineering&image_size=landscape_4_3"
+    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop"
   },
   {
     title: "Metro Retail Development",
     location: "Birmingham City Centre",
     type: "Retail Power Systems",
-    image: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=retail%20shopping%20center%20power%20distribution%20modern&image_size=landscape_4_3"
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop"
   }
 ];
 

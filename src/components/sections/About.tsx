@@ -13,7 +13,7 @@ export default function About() {
     "Ongoing Maintenance & Compliance"
   ];
 
-  const aboutImage = "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=industrial%20electrical%20control%20room%20commercial%20power%20distribution%20modern%20high-tech&image_size=square_hd";
+  const aboutImage = "https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2070&auto=format&fit=crop";
 
   return (
     <section id="about" className="py-20 bg-background overflow-hidden relative">

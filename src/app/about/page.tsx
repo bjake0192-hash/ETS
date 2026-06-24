@@ -44,7 +44,7 @@ export default function AboutPage() {
             </div>
             <div className="rounded-2xl overflow-hidden border border-navy-900/10 shadow-2xl">
               <img 
-                src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=professional%20electrical%20engineers%20planning%20commercial%20project%20high-end&image_size=landscape_4_3" 
+                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop" 
                 alt="Our Team"
                 className="w-full h-full object-cover"
               />

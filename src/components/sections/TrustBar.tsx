@@ -1,37 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShieldCheck, Zap, Users, BarChart3 } from "lucide-react";
+import { ShieldCheck, Zap, Users, CheckCircle2 } from "lucide-react";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/motion";
 
 const trustItems = [
   {
-    icon: Zap,
-    title: "100% Commercial Focused",
-    description: "Specialized in large-scale infrastructure and industrial systems.",
-    image:
-      "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20commercial%20electrical%20plantroom%20infrastructure%20premium%20architectural%20photography%20soft%20lighting&image_size=landscape_4_3",
-  },
-  {
+    title: "Established Authority",
+    description: "Over 25 years of engineering excellence in the UK.",
     icon: ShieldCheck,
-    title: "Safe & Compliant",
-    description: "Fully accredited with NICEIC, CHAS, and SafeContractor.",
-    image:
-      "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=electrical%20safety%20inspection%20commercial%20site%20clipboard%20hard%20hat%20premium%20editorial%20style&image_size=landscape_4_3",
+    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop"
   },
   {
+    title: "Compliance Driven",
+    description: "Rigorous safety standards and full industry accreditation.",
+    icon: CheckCircle2,
+    image: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    title: "Expert Engineering",
+    description: "Highly skilled team of certified electrical specialists.",
     icon: Users,
-    title: "Experienced Professionals",
-    description: "Over 25 years of electrical engineering expertise.",
-    image:
-      "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=professional%20commercial%20electrical%20engineers%20on%20site%20teamwork%20premium%20corporate%20photography&image_size=landscape_4_3",
+    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop"
   },
   {
-    icon: BarChart3,
-    title: "Delivering Value",
-    description: "Optimized solutions that power business efficiency.",
-    image:
-      "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=high-end%20commercial%20electrical%20control%20room%20efficiency%20analytics%20screens%20clean%20industrial%20environment&image_size=landscape_4_3",
+    title: "Operational Uptime",
+    description: "Responsive 24/7 support for critical environments.",
+    icon: Zap,
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2070&auto=format&fit=crop"
   }
 ];
 

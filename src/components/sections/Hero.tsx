@@ -6,7 +6,7 @@ import Link from "next/link";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
 export default function Hero() {
-  const heroImage = "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20commercial%20building%20electrical%20infrastructure%20high-end%20architecture%20bright%20daylight%20clean%20minimal&image_size=landscape_16_9";
+  const heroImage = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop";
   const certifications = [
     {
       name: "NICEIC",

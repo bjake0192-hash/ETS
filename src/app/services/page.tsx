@@ -42,7 +42,7 @@ export default function ServicesPage() {
             </div>
             <div className="relative">
                <img 
-                 src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=complex%20industrial%20electrical%20wiring%20system%20organized%20professional&image_size=landscape_4_3" 
+                 src="https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?q=80&w=2070&auto=format&fit=crop" 
                  alt="Technical Detail"
                  className="rounded-2xl border border-navy-900/10"
                />

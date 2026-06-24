@@ -10,7 +10,7 @@ interface SubpageHeroProps {
 }
 
 export default function SubpageHero({ title, subtitle, imagePrompt }: SubpageHeroProps) {
-  const imageUrl = `https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=${encodeURIComponent(imagePrompt)}&image_size=landscape_16_9`;
+  const imageUrl = "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop";
 
   return (
     <section className="relative pt-36 pb-28 overflow-hidden">
