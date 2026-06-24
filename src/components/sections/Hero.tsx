@@ -10,24 +10,24 @@ export default function Hero() {
   const certifications = [
     {
       name: "NICEIC",
-      src: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=NICEIC%20accreditation%20logo%20professional%20electrical%20safety%20white%20background&image_size=square",
+      src: "/NICEIC-logo.jpg",
     },
     {
-      name: "CHAS",
-      src: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=CHAS%20accreditation%20logo%20health%20and%20safety%20white%20background&image_size=square",
+      name: "CHAS Elite",
+      src: "/chas%20elite.jpeg",
     },
     {
-      name: "SafeContractor",
-      src: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=SafeContractor%20accreditation%20logo%20professional%20standards%20white%20background&image_size=square",
+      name: "Avetta",
+      src: "/avetta-member-logo.png",
     },
     {
-      name: "Constructionline",
-      src: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Constructionline%20accreditation%20logo%20industry%20standard%20white%20background&image_size=square",
+      name: "Constructionline Gold",
+      src: "/Constructionline-Gold-Logo.png",
     },
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-36 sm:pt-40 pb-24">
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden pt-32 sm:pt-36 pb-36">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <div 
@@ -118,6 +118,32 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
+      </div>
+
+      <div className="absolute bottom-0 left-0 z-10 w-full">
+        <div className="container mx-auto px-6 pb-6">
+          <div className="surface-card border border-white/50 rounded-[2rem] px-5 sm:px-7 py-4">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-8">
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-navy-900/55 whitespace-nowrap lg:min-w-fit">
+                Certified & Accredited
+              </p>
+              <div className="grid flex-1 grid-cols-2 gap-3 md:grid-cols-4">
+                {certifications.map((brand) => (
+                  <div
+                    key={brand.name}
+                    className="h-20 rounded-2xl bg-white/70 border border-white/70 flex items-center justify-center px-4"
+                  >
+                    <img
+                      src={brand.src}
+                      alt={brand.name}
+                      className="max-h-12 w-auto max-w-full object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <style jsx>{`
