@@ -97,7 +97,7 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          <div className="mt-10 w-full">
+          <div className="mt-7 w-full">
             <div className="surface-card relative overflow-hidden border border-white/55 rounded-[2rem] px-5 sm:px-7 py-4 shadow-[0_24px_60px_rgba(26,21,18,0.08)] backdrop-blur-xl">
               <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/60 to-transparent" />
               <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-8">
@@ -106,14 +106,11 @@ export default function Hero() {
                 </p>
                 <div className="grid flex-1 grid-cols-2 gap-3 md:grid-cols-4">
                   {certifications.map((brand) => (
-                    <div
-                      key={brand.name}
-                      className="h-20 rounded-2xl border border-white/35 bg-gradient-to-b from-white/40 to-white/10 flex items-center justify-center px-4"
-                    >
+                    <div key={brand.name} className="h-20 flex items-center justify-center px-2">
                       <img
                         src={brand.src}
                         alt={brand.name}
-                        className="max-h-12 w-auto max-w-full object-contain mix-blend-multiply"
+                        className="max-h-[3.6rem] w-auto max-w-full object-contain mix-blend-multiply"
                       />
                     </div>
                   ))}
