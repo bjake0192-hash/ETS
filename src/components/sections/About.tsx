@@ -16,18 +16,18 @@ export default function About() {
   const aboutImage = "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=industrial%20electrical%20control%20room%20commercial%20power%20distribution%20modern%20high-tech&image_size=square_hd";
 
   return (
-    <section id="about" className="py-28 bg-background overflow-hidden relative">
+    <section id="about" className="py-20 bg-background overflow-hidden relative">
       <div className="absolute inset-y-0 left-0 w-[34%] bg-electric-yellow/5 blur-3xl pointer-events-none" />
       <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Image Side */}
           <motion.div 
             initial={{ opacity: 0, x: -50, rotate: -2 }}
             whileInView={{ opacity: 1, x: 0, rotate: 0 }}
             viewport={{ once: true }}
-            className="w-full lg:w-1/2 relative"
+            className="w-full lg:w-[45%] relative"
           >
-            <div className="relative z-10 rounded-[2rem] overflow-hidden aspect-square accent-ring">
+            <div className="relative z-10 rounded-[2rem] overflow-hidden aspect-[4/3] lg:aspect-square accent-ring">
               <img 
                 src={aboutImage} 
                 alt="Commercial Electrical Infrastructure"
@@ -45,7 +45,7 @@ export default function About() {
           </motion.div>
 
           {/* Content Side */}
-          <Reveal className="w-full lg:w-1/2">
+          <Reveal className="w-full lg:w-[55%]">
             <span className="text-electric-yellow font-black tracking-widest uppercase text-sm mb-4 block">
               ESTABLISHED AUTHORITY
             </span>
