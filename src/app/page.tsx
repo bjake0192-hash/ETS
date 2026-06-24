@@ -3,7 +3,6 @@ import TrustBar from "@/components/sections/TrustBar";
 import About from "@/components/sections/About";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import Stats from "@/components/sections/Stats";
-import Projects from "@/components/sections/Projects";
 import Sectors from "@/components/sections/Sectors";
 import CTA from "@/components/sections/CTA";
 
@@ -17,7 +16,6 @@ export default function Home() {
       <About />
       <ServicesGrid />
       <Stats />
-      <Projects />
       <Sectors />
       <CTA />
     </main>

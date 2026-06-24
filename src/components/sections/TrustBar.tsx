@@ -54,10 +54,10 @@ export default function TrustBar() {
               className="group relative surface-card rounded-[1.75rem] border border-white/45 p-6 flex items-start gap-4 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-electric-yellow/55"
             >
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-15 group-hover:opacity-30 transition-opacity duration-500"
+                className="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-50 transition-opacity duration-500"
                 style={{ backgroundImage: `url('${item.image}')` }}
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/60 to-background/40 group-hover:from-electric-yellow/10 group-hover:via-background/70 group-hover:to-background/60 transition-colors duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/40 to-background/20 group-hover:from-electric-yellow/20 group-hover:via-background/50 group-hover:to-background/40 transition-colors duration-500" />
               <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/65 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative z-10 mt-1 bg-electric-yellow/10 p-3 rounded-2xl transition-colors duration-300 group-hover:bg-electric-yellow">
                 <item.icon className="text-electric-yellow group-hover:text-white transition-colors duration-300" size={24} />
