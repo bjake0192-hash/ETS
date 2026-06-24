@@ -110,7 +110,7 @@ export default function Hero() {
                       <img
                         src={brand.src}
                         alt={brand.name}
-                        className="max-h-[3.6rem] w-auto max-w-full object-contain mix-blend-multiply"
+                        className="max-h-12 w-auto max-w-full object-contain"
                       />
                     </div>
                   ))}

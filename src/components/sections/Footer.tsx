@@ -6,19 +6,19 @@ import Link from "next/link";
 const accreditations = [
   { 
     name: "NICEIC", 
-    src: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=NICEIC%20accreditation%20logo%20professional%20electrical%20safety%20white%20background&image_size=square"
+    src: "/NICEIC-logo.jpg"
   },
   { 
-    name: "CHAS", 
-    src: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=CHAS%20accreditation%20logo%20health%20and%20safety%20white%20background&image_size=square"
+    name: "CHAS Elite", 
+    src: "/chas%20elite.jpeg"
   },
   { 
-    name: "SafeContractor", 
-    src: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=SafeContractor%20accreditation%20logo%20professional%20standards%20white%20background&image_size=square"
+    name: "Avetta", 
+    src: "/avetta-member-logo.png"
   },
   { 
-    name: "Constructionline", 
-    src: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Constructionline%20accreditation%20logo%20industry%20standard%20white%20background&image_size=square"
+    name: "Constructionline Gold", 
+    src: "/Constructionline-Gold-Logo.png"
   }
 ];
 
@@ -93,7 +93,7 @@ export function Footer() {
                   <img 
                     src={brand.src} 
                     alt={brand.name} 
-                    className="max-w-full max-h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" 
+                    className="max-w-full max-h-full object-contain group-hover:opacity-100 transition-all duration-300" 
                   />
                 </div>
               ))}

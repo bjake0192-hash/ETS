@@ -14,22 +14,22 @@ const stats = [
 const accreditations = [
   { 
     name: "NICEIC", 
-    src: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=NICEIC%20accreditation%20logo%20professional%20electrical%20safety%20white%20background&image_size=square",
+    src: "/NICEIC-logo.jpg",
     width: "w-24"
   },
   { 
-    name: "CHAS", 
-    src: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=CHAS%20accreditation%20logo%20health%20and%20safety%20white%20background&image_size=square",
-    width: "w-20"
+    name: "CHAS Elite", 
+    src: "/chas%20elite.jpeg",
+    width: "w-24"
   },
   { 
-    name: "SafeContractor", 
-    src: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=SafeContractor%20accreditation%20logo%20professional%20standards%20white%20background&image_size=square",
-    width: "w-32"
+    name: "Avetta", 
+    src: "/avetta-member-logo.png",
+    width: "w-24"
   },
   { 
-    name: "Constructionline", 
-    src: "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=Constructionline%20accreditation%20logo%20industry%20standard%20white%20background&image_size=square",
+    name: "Constructionline Gold", 
+    src: "/Constructionline-Gold-Logo.png",
     width: "w-32"
   }
 ];
@@ -82,7 +82,7 @@ export default function Stats() {
                   <img 
                     src={brand.src} 
                     alt={`${brand.name} Accreditation`}
-                    className="max-w-full max-h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                    className="max-w-full max-h-full object-contain group-hover:opacity-100 transition-all duration-500"
                   />
                 </div>
               </motion.div>
