@@ -98,18 +98,22 @@ export default function Hero() {
           </div>
 
           <div className="mt-10 w-full">
-            <div className="surface-card border border-white/50 rounded-[2rem] px-6 sm:px-10 py-6">
-              <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-                <p className="text-xs font-bold uppercase tracking-[0.28em] text-navy-900/55 whitespace-nowrap">
+            <div className="surface-card relative overflow-hidden border border-white/55 rounded-[2rem] px-5 sm:px-7 py-4 shadow-[0_24px_60px_rgba(26,21,18,0.08)] backdrop-blur-xl">
+              <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/60 to-transparent" />
+              <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-8">
+                <p className="text-xs font-bold uppercase tracking-[0.28em] text-navy-900/55 whitespace-nowrap lg:min-w-fit">
                   Certified & Accredited
                 </p>
-                <div className="flex flex-wrap items-center gap-x-10 gap-y-4 md:justify-end">
+                <div className="grid flex-1 grid-cols-2 gap-3 md:grid-cols-4">
                   {certifications.map((brand) => (
-                    <div key={brand.name} className="h-10 flex items-center">
+                    <div
+                      key={brand.name}
+                      className="h-20 rounded-2xl border border-white/35 bg-gradient-to-b from-white/40 to-white/10 flex items-center justify-center px-4"
+                    >
                       <img
                         src={brand.src}
                         alt={brand.name}
-                        className="h-10 w-auto object-contain filter grayscale opacity-70"
+                        className="max-h-12 w-auto max-w-full object-contain mix-blend-multiply"
                       />
                     </div>
                   ))}
@@ -118,32 +122,6 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
-      </div>
-
-      <div className="absolute bottom-0 left-0 z-10 w-full">
-        <div className="container mx-auto px-6 pb-6">
-          <div className="surface-card border border-white/50 rounded-[2rem] px-5 sm:px-7 py-4">
-            <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-8">
-              <p className="text-xs font-bold uppercase tracking-[0.28em] text-navy-900/55 whitespace-nowrap lg:min-w-fit">
-                Certified & Accredited
-              </p>
-              <div className="grid flex-1 grid-cols-2 gap-3 md:grid-cols-4">
-                {certifications.map((brand) => (
-                  <div
-                    key={brand.name}
-                    className="h-20 rounded-2xl bg-white/70 border border-white/70 flex items-center justify-center px-4"
-                  >
-                    <img
-                      src={brand.src}
-                      alt={brand.name}
-                      className="max-h-12 w-auto max-w-full object-contain"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       <style jsx>{`
