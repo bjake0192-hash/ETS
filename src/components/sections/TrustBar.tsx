@@ -8,22 +8,30 @@ const trustItems = [
   {
     icon: Zap,
     title: "100% Commercial Focused",
-    description: "Specialized in large-scale infrastructure and industrial systems."
+    description: "Specialized in large-scale infrastructure and industrial systems.",
+    image:
+      "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern%20commercial%20electrical%20plantroom%20infrastructure%20premium%20architectural%20photography%20soft%20lighting&image_size=landscape_4_3",
   },
   {
     icon: ShieldCheck,
     title: "Safe & Compliant",
-    description: "Fully accredited with NICEIC, CHAS, and SafeContractor."
+    description: "Fully accredited with NICEIC, CHAS, and SafeContractor.",
+    image:
+      "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=electrical%20safety%20inspection%20commercial%20site%20clipboard%20hard%20hat%20premium%20editorial%20style&image_size=landscape_4_3",
   },
   {
     icon: Users,
     title: "Experienced Professionals",
-    description: "Over 25 years of electrical engineering expertise."
+    description: "Over 25 years of electrical engineering expertise.",
+    image:
+      "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=professional%20commercial%20electrical%20engineers%20on%20site%20teamwork%20premium%20corporate%20photography&image_size=landscape_4_3",
   },
   {
     icon: BarChart3,
     title: "Delivering Value",
-    description: "Optimized solutions that power business efficiency."
+    description: "Optimized solutions that power business efficiency.",
+    image:
+      "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=high-end%20commercial%20electrical%20control%20room%20efficiency%20analytics%20screens%20clean%20industrial%20environment&image_size=landscape_4_3",
   }
 ];
 
@@ -43,12 +51,18 @@ export default function TrustBar() {
             <motion.div
               key={index}
               variants={fadeUp}
-              className="surface-card rounded-[1.75rem] border border-white/45 p-6 flex items-start gap-4"
+              className="group relative surface-card rounded-[1.75rem] border border-white/45 p-6 flex items-start gap-4 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-electric-yellow/55 hover:bg-electric-yellow/8"
             >
-              <div className="mt-1 bg-electric-yellow/10 p-3 rounded-2xl">
-                <item.icon className="text-electric-yellow" size={24} />
+              <div
+                className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{ backgroundImage: `url('${item.image}')` }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-background/96 via-background/90 to-background/82 group-hover:from-electric-yellow/18 group-hover:via-background/86 group-hover:to-background/82 transition-colors duration-500" />
+              <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/65 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative z-10 mt-1 bg-electric-yellow/10 p-3 rounded-2xl transition-colors duration-300 group-hover:bg-electric-yellow">
+                <item.icon className="text-electric-yellow group-hover:text-white transition-colors duration-300" size={24} />
               </div>
-              <div>
+              <div className="relative z-10">
                 <h3 className="text-navy-900 font-bold tracking-tight mb-1">{item.title}</h3>
                 <p className="text-sm text-navy-900/60 leading-snug">{item.description}</p>
               </div>

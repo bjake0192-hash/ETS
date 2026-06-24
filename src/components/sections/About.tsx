@@ -49,7 +49,7 @@ export default function About() {
             <span className="text-electric-yellow font-black tracking-widest uppercase text-sm mb-4 block">
               ESTABLISHED AUTHORITY
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-navy-900 leading-tight mb-8 tracking-[-0.03em]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-navy-900 leading-[0.95] mb-8 tracking-[-0.03em]">
               POWERING COMMERCIAL <br />
               <span className="text-navy-900/40">INFRASTRUCTURE</span>
             </h2>
