@@ -130,26 +130,26 @@ export default function ServicesGrid() {
             <motion.div
               key={index}
               variants={fadeUp}
-              className="group relative p-8 rounded-[2rem] surface-card border border-white/50 hover:border-electric-yellow/55 transition-all hover:-translate-y-3"
+              className="group relative p-6 rounded-[1.75rem] surface-card border border-white/50 hover:border-electric-yellow/55 transition-all hover:-translate-y-2"
             >
               <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="mb-6 bg-navy-900/5 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-electric-yellow transition-colors shadow-inner">
-                <service.icon className="text-electric-yellow group-hover:text-white transition-colors" size={30} />
+              <div className="mb-5 bg-navy-900/5 w-14 h-14 rounded-2xl flex items-center justify-center group-hover:bg-electric-yellow transition-colors shadow-inner">
+                <service.icon className="text-electric-yellow group-hover:text-white transition-colors" size={26} />
               </div>
-              <div className="flex items-start justify-between gap-4 mb-3">
-                <h3 className="text-xl font-bold text-navy-900 tracking-tight">
+              <div className="flex items-start justify-between gap-4 mb-2">
+                <h3 className="text-lg font-bold text-navy-900 tracking-tight">
                   {service.title}
                 </h3>
                 <ArrowUpRight
-                  size={18}
+                  size={16}
                   className="text-navy-900/35 group-hover:text-electric-yellow group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
                 />
               </div>
-              <p className="text-navy-900/60 text-sm leading-relaxed">
+              <p className="text-navy-900/60 text-xs leading-relaxed">
                 {service.description}
               </p>
-              <div className="mt-6 h-px w-full bg-gradient-to-r from-electric-yellow/0 via-electric-yellow/30 to-electric-yellow/0 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <p className="mt-6 text-xs font-bold uppercase tracking-[0.22em] text-navy-900/35">
+              <div className="mt-5 h-px w-full bg-gradient-to-r from-electric-yellow/0 via-electric-yellow/30 to-electric-yellow/0 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.22em] text-navy-900/35">
                 Precision Delivery
               </p>
             </motion.div>
