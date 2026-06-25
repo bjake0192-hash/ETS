@@ -152,7 +152,7 @@ export default function ServicesGrid() {
                 }}
                 onMouseLeave={() => setIsPaused(false)}
                 animate={isActive ? { scale: 1.04, y: -8 } : { scale: 1, y: 0 }}
-                className={`group relative p-6 rounded-[1.75rem] surface-card border transition-all duration-500 ${
+                className={`group relative px-6 py-5 rounded-[1.75rem] surface-card border transition-all duration-500 ${
                   isActive ? "border-electric-yellow shadow-2xl shadow-electric-yellow/10" : "border-white/50 hover:border-electric-yellow/55"
                 }`}
               >
@@ -171,34 +171,34 @@ export default function ServicesGrid() {
 
                 <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 
-                <div className={`mb-5 w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 shadow-inner ${
+                <div className={`mb-4 w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-500 shadow-inner ${
                   isActive ? "bg-electric-yellow shadow-lg shadow-electric-yellow/30" : "bg-navy-900/5 group-hover:bg-electric-yellow"
                 }`}>
                   <service.icon className={`transition-colors duration-500 ${
                     isActive ? "text-white" : "text-electric-yellow group-hover:text-white"
-                  }`} size={26} />
+                  }`} size={22} />
                 </div>
 
-                <div className="flex items-start justify-between gap-4 mb-2">
-                  <h3 className={`text-lg font-bold tracking-tight transition-colors duration-500 ${
+                <div className="flex items-start justify-between gap-4 mb-1.5">
+                  <h3 className={`text-base font-bold tracking-tight transition-colors duration-500 ${
                     isActive ? "text-navy-900" : "text-navy-900"
                   }`}>
                     {service.title}
                   </h3>
                   <ArrowUpRight
-                    size={16}
+                    size={14}
                     className={`transition-all duration-500 ${
                       isActive ? "text-electric-yellow translate-x-1 -translate-y-1" : "text-navy-900/35 group-hover:text-electric-yellow group-hover:translate-x-1 group-hover:-translate-y-1"
                     }`}
                   />
                 </div>
-                <p className="text-navy-900/60 text-xs leading-relaxed">
+                <p className="text-navy-900/60 text-[11px] leading-relaxed line-clamp-2">
                   {service.description}
                 </p>
-                <div className={`mt-5 h-px w-full bg-gradient-to-r from-electric-yellow/0 via-electric-yellow/30 to-electric-yellow/0 transition-opacity duration-500 ${
+                <div className={`mt-4 h-px w-full bg-gradient-to-r from-electric-yellow/0 via-electric-yellow/30 to-electric-yellow/0 transition-opacity duration-500 ${
                   isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                 }`} />
-                <p className={`mt-5 text-[10px] font-bold uppercase tracking-[0.22em] transition-colors duration-500 ${
+                <p className={`mt-4 text-[9px] font-bold uppercase tracking-[0.22em] transition-colors duration-500 ${
                   isActive ? "text-electric-yellow" : "text-navy-900/35"
                 }`}>
                   Precision Delivery
