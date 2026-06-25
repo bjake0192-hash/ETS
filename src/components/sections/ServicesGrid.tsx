@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { 
   Building2, 
@@ -59,6 +60,19 @@ const services = [
 ];
 
 export default function ServicesGrid() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % services.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [isPaused]);
+
   return (
     <section id="services" className="py-28 bg-background relative overflow-hidden">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/30 to-transparent" />
@@ -126,34 +140,72 @@ export default function ServicesGrid() {
           viewport={viewportOnce}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              variants={fadeUp}
-              className="group relative p-6 rounded-[1.75rem] surface-card border border-white/50 hover:border-electric-yellow/55 transition-all hover:-translate-y-2"
-            >
-              <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="mb-5 bg-navy-900/5 w-14 h-14 rounded-2xl flex items-center justify-center group-hover:bg-electric-yellow transition-colors shadow-inner">
-                <service.icon className="text-electric-yellow group-hover:text-white transition-colors" size={26} />
-              </div>
-              <div className="flex items-start justify-between gap-4 mb-2">
-                <h3 className="text-lg font-bold text-navy-900 tracking-tight">
-                  {service.title}
-                </h3>
-                <ArrowUpRight
-                  size={16}
-                  className="text-navy-900/35 group-hover:text-electric-yellow group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
-                />
-              </div>
-              <p className="text-navy-900/60 text-xs leading-relaxed">
-                {service.description}
-              </p>
-              <div className="mt-5 h-px w-full bg-gradient-to-r from-electric-yellow/0 via-electric-yellow/30 to-electric-yellow/0 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.22em] text-navy-900/35">
-                Precision Delivery
-              </p>
-            </motion.div>
-          ))}
+          {services.map((service, index) => {
+            const isActive = activeIndex === index;
+            return (
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                onMouseEnter={() => {
+                  setIsPaused(true);
+                  setActiveIndex(index);
+                }}
+                onMouseLeave={() => setIsPaused(false)}
+                animate={isActive ? { scale: 1.04, y: -8 } : { scale: 1, y: 0 }}
+                className={`group relative p-6 rounded-[1.75rem] surface-card border transition-all duration-500 ${
+                  isActive ? "border-electric-yellow shadow-2xl shadow-electric-yellow/10" : "border-white/50 hover:border-electric-yellow/55"
+                }`}
+              >
+                {/* Power Pulse Animation */}
+                <AnimatePresence>
+                  {isActive && (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: [0, 1, 0], scale: [0.95, 1.08, 1.15] }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
+                      className="absolute inset-0 rounded-[1.75rem] border-2 border-electric-yellow/30 pointer-events-none"
+                    />
+                  )}
+                </AnimatePresence>
+
+                <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                
+                <div className={`mb-5 w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 shadow-inner ${
+                  isActive ? "bg-electric-yellow shadow-lg shadow-electric-yellow/30" : "bg-navy-900/5 group-hover:bg-electric-yellow"
+                }`}>
+                  <service.icon className={`transition-colors duration-500 ${
+                    isActive ? "text-white" : "text-electric-yellow group-hover:text-white"
+                  }`} size={26} />
+                </div>
+
+                <div className="flex items-start justify-between gap-4 mb-2">
+                  <h3 className={`text-lg font-bold tracking-tight transition-colors duration-500 ${
+                    isActive ? "text-navy-900" : "text-navy-900"
+                  }`}>
+                    {service.title}
+                  </h3>
+                  <ArrowUpRight
+                    size={16}
+                    className={`transition-all duration-500 ${
+                      isActive ? "text-electric-yellow translate-x-1 -translate-y-1" : "text-navy-900/35 group-hover:text-electric-yellow group-hover:translate-x-1 group-hover:-translate-y-1"
+                    }`}
+                  />
+                </div>
+                <p className="text-navy-900/60 text-xs leading-relaxed">
+                  {service.description}
+                </p>
+                <div className={`mt-5 h-px w-full bg-gradient-to-r from-electric-yellow/0 via-electric-yellow/30 to-electric-yellow/0 transition-opacity duration-500 ${
+                  isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                }`} />
+                <p className={`mt-5 text-[10px] font-bold uppercase tracking-[0.22em] transition-colors duration-500 ${
+                  isActive ? "text-electric-yellow" : "text-navy-900/35"
+                }`}>
+                  Precision Delivery
+                </p>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>
