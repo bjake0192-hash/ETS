@@ -6,7 +6,7 @@ import Link from "next/link";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
 export default function Hero() {
-  const heroImage = "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop";
+  const heroImage = "/hero-bg.jpg";
   const certifications = [
     {
       name: "NICEIC",
