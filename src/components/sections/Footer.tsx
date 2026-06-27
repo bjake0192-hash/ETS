@@ -70,9 +70,9 @@ export function Footer() {
                 <span>123 Engineering Way,<br />Innovation Park,<br />London, UK</span>
               </li>
               <li>
-                <a href="tel:01234567890" className="flex items-center gap-3 text-white/60 hover:text-electric-yellow transition-colors">
+                <a href="tel:01617666699" className="flex items-center gap-3 text-white/60 hover:text-electric-yellow transition-colors">
                   <Phone size={18} className="text-electric-yellow shrink-0" />
-                  <span>01234 567 890</span>
+                  <span>0161 766 6699</span>
                 </a>
               </li>
               <li>

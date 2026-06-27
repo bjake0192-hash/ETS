@@ -45,7 +45,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-navy-900 font-black uppercase tracking-widest text-xs mb-2">Email Address</h4>
-                    <p className="text-2xl font-black text-navy-900 tracking-tight">info@ets-ltd.com</p>
+                    <p className="text-2xl font-black text-navy-900 tracking-tight">info@ets-ltd.co.uk</p>
                     <p className="text-sm text-navy-900/50">Response within 24 hours</p>
                   </div>
                 </div>

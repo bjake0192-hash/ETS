@@ -50,7 +50,7 @@ export default function CTA() {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-navy-900/50 uppercase tracking-widest">Call Us</p>
-                  <p className="text-navy-900 font-black text-lg">01234 567 890</p>
+                  <p className="text-navy-900 font-black text-lg">0161 766 6699</p>
                 </div>
               </div>
             </div>
