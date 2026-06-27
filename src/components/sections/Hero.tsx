@@ -31,9 +31,12 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-[10s] scale-110"
+          className="absolute inset-0 transition-transform duration-[10s] scale-110"
           style={{ 
             backgroundImage: `url('${heroImage}')`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
             animation: 'ken-burns 20s infinite alternate'
           }}
         />
