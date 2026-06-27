@@ -61,26 +61,26 @@ export default function FeaturedProjects() {
   }, [isPaused]);
 
   return (
-    <section className="py-28 bg-white/40 relative overflow-hidden border-t border-navy-900/10">
+    <section className="py-20 bg-white/40 relative overflow-hidden border-t border-navy-900/10">
       <div className="container mx-auto px-6">
         <Reveal>
           <span className="text-electric-yellow font-black tracking-widest uppercase text-sm mb-4 block text-center md:text-left">
             FEATURED WORK
           </span>
-          <h2 className="text-4xl md:text-5xl font-black text-navy-900 mb-16 tracking-tight text-center md:text-left">
+          <h2 className="text-4xl md:text-5xl font-black text-navy-900 mb-12 tracking-tight text-center md:text-left">
             DELIVERING AT <span className="text-navy-900/40">SCALE</span>
           </h2>
         </Reveal>
 
         <div 
-          className="surface-card rounded-[2.5rem] border border-white/50 p-6 md:p-10 lg:p-12"
+          className="w-full"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
             {/* Left Side: Content */}
-            <div className="relative min-h-[300px] flex flex-col justify-center">
+            <div className="relative min-h-[300px] flex flex-col justify-center pb-8 lg:pb-0">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeIndex}
@@ -115,7 +115,7 @@ export default function FeaturedProjects() {
               </AnimatePresence>
 
               {/* Navigation Dots */}
-              <div className="absolute -bottom-10 left-0 flex gap-3">
+              <div className="absolute bottom-0 left-0 flex gap-3">
                 {featuredProjects.map((_, idx) => (
                   <button
                     key={idx}
@@ -130,7 +130,7 @@ export default function FeaturedProjects() {
             </div>
 
             {/* Right Side: Image Container */}
-            <div className="relative aspect-[4/3] lg:aspect-square rounded-[2rem] overflow-hidden border border-white/40 shadow-2xl">
+            <div className="relative aspect-[4/3] lg:aspect-[4/3] rounded-[2rem] overflow-hidden border border-white/40 shadow-2xl">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeIndex}

@@ -166,10 +166,10 @@ export default function ServicesGrid() {
               >
                 {/* Background Image that fades in when active */}
                 <div 
-                  className={`absolute inset-0 bg-cover bg-center transition-opacity duration-700 ease-in-out ${isActive ? 'opacity-15' : 'opacity-0'}`}
+                  className={`absolute inset-0 bg-cover bg-center transition-opacity duration-700 ease-in-out ${isActive ? 'opacity-30' : 'opacity-0'}`}
                   style={{ backgroundImage: `url('${service.image}')` }}
                 />
-                <div className={`absolute inset-0 bg-gradient-to-br from-background/90 via-background/60 to-background/30 transition-opacity duration-700 ${isActive ? 'opacity-100' : 'opacity-0'}`} />
+                <div className={`absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-background/50 transition-opacity duration-700 ${isActive ? 'opacity-100' : 'opacity-0'}`} />
 
                 {/* Power Pulse Animation */}
                 <AnimatePresence>
