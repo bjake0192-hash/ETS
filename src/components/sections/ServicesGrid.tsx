@@ -20,42 +20,50 @@ const services = [
   {
     icon: Building2,
     title: "Commercial Installations",
-    description: "Complete electrical fit-outs for offices, retail spaces, and corporate environments."
+    description: "Complete electrical fit-outs for offices, retail spaces, and corporate environments.",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: Factory,
     title: "Industrial Electrical",
-    description: "Heavy-duty power distribution and control systems for factories and warehouses."
+    description: "Heavy-duty power distribution and control systems for factories and warehouses.",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: Wrench,
     title: "Maintenance & Support",
-    description: "Planned and reactive maintenance to keep your business operations running smoothly."
+    description: "Planned and reactive maintenance to keep your business operations running smoothly.",
+    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: ClipboardCheck,
     title: "Testing & Commissioning",
-    description: "Full EICR reports, PAT testing, and specialized system commissioning."
+    description: "Full EICR reports, PAT testing, and specialized system commissioning.",
+    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: Leaf,
     title: "Energy Efficiency",
-    description: "EV charging infrastructure and energy-saving lighting solutions for businesses."
+    description: "EV charging infrastructure and energy-saving lighting solutions for businesses.",
+    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: Lightbulb,
     title: "Emergency Lighting",
-    description: "Design, installation, and testing of compliant emergency lighting systems."
+    description: "Design, installation, and testing of compliant emergency lighting systems.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: ShieldAlert,
     title: "Fire Alarm Systems",
-    description: "Advanced fire detection and alarm systems tailored to commercial safety standards."
+    description: "Advanced fire detection and alarm systems tailored to commercial safety standards.",
+    image: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: Network,
     title: "Data & Infrastructure",
-    description: "Structured cabling, server room fit-outs, and integrated data solutions."
+    description: "Structured cabling, server room fit-outs, and integrated data solutions.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop"
   }
 ];
 
@@ -74,7 +82,7 @@ export default function ServicesGrid() {
   }, [isPaused]);
 
   return (
-    <section id="services" className="py-28 bg-background relative overflow-hidden">
+    <section id="services" className="py-28 bg-charcoal-900/5 relative overflow-hidden">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/30 to-transparent" />
       <div className="absolute top-24 left-[8%] h-40 w-40 rounded-full bg-electric-yellow/10 blur-3xl pointer-events-none" />
       <div className="absolute bottom-16 right-[10%] h-52 w-52 rounded-full bg-charcoal-900/8 blur-3xl pointer-events-none" />
@@ -152,10 +160,17 @@ export default function ServicesGrid() {
                 }}
                 onMouseLeave={() => setIsPaused(false)}
                 animate={isActive ? { scale: 1.04, y: -8 } : { scale: 1, y: 0 }}
-                className={`group relative px-6 py-5 rounded-[1.75rem] surface-card border transition-all duration-500 ${
+                className={`group relative px-6 py-5 rounded-[1.75rem] surface-card border transition-all duration-500 overflow-hidden ${
                   isActive ? "border-electric-yellow shadow-2xl shadow-electric-yellow/10" : "border-white/50 hover:border-electric-yellow/55"
                 }`}
               >
+                {/* Background Image that fades in when active */}
+                <div 
+                  className={`absolute inset-0 bg-cover bg-center transition-opacity duration-700 ease-in-out ${isActive ? 'opacity-15' : 'opacity-0'}`}
+                  style={{ backgroundImage: `url('${service.image}')` }}
+                />
+                <div className={`absolute inset-0 bg-gradient-to-br from-background/90 via-background/60 to-background/30 transition-opacity duration-700 ${isActive ? 'opacity-100' : 'opacity-0'}`} />
+
                 {/* Power Pulse Animation */}
                 <AnimatePresence>
                   {isActive && (
@@ -169,9 +184,9 @@ export default function ServicesGrid() {
                   )}
                 </AnimatePresence>
 
-                <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10" />
                 
-                <div className={`mb-4 w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-500 shadow-inner ${
+                <div className={`relative z-10 mb-4 w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-500 shadow-inner ${
                   isActive ? "bg-electric-yellow shadow-lg shadow-electric-yellow/30" : "bg-navy-900/5 group-hover:bg-electric-yellow"
                 }`}>
                   <service.icon className={`transition-colors duration-500 ${
@@ -179,7 +194,7 @@ export default function ServicesGrid() {
                   }`} size={22} />
                 </div>
 
-                <div className="flex items-start justify-between gap-4 mb-1.5">
+                <div className="relative z-10 flex items-start justify-between gap-4 mb-1.5">
                   <h3 className={`text-base font-bold tracking-tight transition-colors duration-500 ${
                     isActive ? "text-navy-900" : "text-navy-900"
                   }`}>
@@ -192,13 +207,13 @@ export default function ServicesGrid() {
                     }`}
                   />
                 </div>
-                <p className="text-navy-900/60 text-[11px] leading-relaxed line-clamp-2">
+                <p className="relative z-10 text-navy-900/60 text-[11px] leading-relaxed line-clamp-2">
                   {service.description}
                 </p>
-                <div className={`mt-4 h-px w-full bg-gradient-to-r from-electric-yellow/0 via-electric-yellow/30 to-electric-yellow/0 transition-opacity duration-500 ${
+                <div className={`relative z-10 mt-4 h-px w-full bg-gradient-to-r from-electric-yellow/0 via-electric-yellow/30 to-electric-yellow/0 transition-opacity duration-500 ${
                   isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                 }`} />
-                <p className={`mt-4 text-[9px] font-bold uppercase tracking-[0.22em] transition-colors duration-500 ${
+                <p className={`relative z-10 mt-4 text-[9px] font-bold uppercase tracking-[0.22em] transition-colors duration-500 ${
                   isActive ? "text-electric-yellow" : "text-navy-900/35"
                 }`}>
                   Precision Delivery

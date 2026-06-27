@@ -1,14 +1,15 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView, useSpring, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import Reveal from "@/components/ui/Reveal";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/motion";
 
 const stats = [
-  { label: "Years Experience", value: "25+" },
-  { label: "Projects Completed", value: "1,200+" },
-  { label: "Commercial Focus", value: "100%" },
-  { label: "Skilled Engineers", value: "40+" }
+  { label: "Years Experience", value: 25, suffix: "+" },
+  { label: "Projects Completed", value: 1200, suffix: "+" },
+  { label: "Commercial Focus", value: 100, suffix: "%" },
+  { label: "Skilled Engineers", value: 40, suffix: "+" }
 ];
 
 const accreditations = [
@@ -34,27 +35,81 @@ const accreditations = [
   }
 ];
 
+function Counter({ value, suffix }: { value: number; suffix: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [hasAnimated, setHasAnimated] = useState(false);
+  
+  const springValue = useSpring(0, {
+    stiffness: 45,
+    damping: 15,
+    mass: 1
+  });
+
+  const displayValue = useTransform(springValue, (current) => 
+    Math.round(current).toLocaleString()
+  );
+
+  useEffect(() => {
+    if (isInView && !hasAnimated) {
+      springValue.set(value);
+      setHasAnimated(true);
+    }
+  }, [isInView, springValue, value, hasAnimated]);
+
+  return (
+    <span ref={ref}>
+      <motion.span>{displayValue}</motion.span>
+      {suffix}
+    </span>
+  );
+}
+
 export default function Stats() {
   return (
-    <section className="py-28 bg-background border-t border-navy-900/10 relative overflow-hidden">
+    <section className="py-24 bg-background relative overflow-hidden">
       <div className="absolute left-[10%] top-10 h-52 w-52 rounded-full bg-electric-yellow/8 blur-3xl" />
       <div className="container mx-auto px-6">
-        {/* Stats Grid */}
+        
+        {/* Accreditations Row (Merged Conceptual Layout) */}
+        <Reveal className="mb-20">
+          <div className="surface-card relative overflow-hidden border border-white/55 rounded-[2rem] px-6 sm:px-10 py-5 shadow-[0_24px_60px_rgba(26,21,18,0.08)] backdrop-blur-xl">
+            <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/60 to-transparent" />
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-12">
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-navy-900/55 whitespace-nowrap lg:min-w-fit">
+                Certified & Accredited
+              </p>
+              <div className="grid flex-1 grid-cols-2 gap-6 md:grid-cols-4">
+                {accreditations.map((brand) => (
+                  <div key={brand.name} className="h-16 flex items-center justify-center px-4 mix-blend-multiply">
+                    <img
+                      src={brand.src}
+                      alt={brand.name}
+                      className="max-h-12 w-auto max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Stats Grid with Animation */}
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {stats.map((stat, index) => (
             <motion.div
               key={index}
               variants={fadeUp}
-              className="surface-card rounded-[2rem] border border-white/45 p-8 text-center"
+              className="surface-card rounded-[2rem] border border-white/45 p-8 text-center hover:-translate-y-2 transition-transform duration-500"
             >
               <p className="text-5xl md:text-6xl font-black text-navy-900 mb-3 tracking-tighter">
-                {stat.value}
+                <Counter value={stat.value} suffix={stat.suffix} />
               </p>
               <p className="text-electric-yellow font-black tracking-widest uppercase text-xs">
                 {stat.label}
@@ -63,32 +118,6 @@ export default function Stats() {
           ))}
         </motion.div>
 
-        {/* Accreditations */}
-        <Reveal className="pt-16 border-t border-navy-900/10">
-          <p className="text-center text-navy-900/50 font-bold tracking-widest uppercase text-xs mb-12">
-            CERTIFIED & ACCREDITED BY
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24">
-            {accreditations.map((brand, index) => (
-              <motion.div 
-                key={brand.name}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="flex flex-col items-center group"
-              >
-                <div className={`${brand.width} h-20 relative flex items-center justify-center surface-card rounded-3xl border border-white/45 px-6`}>
-                  <img 
-                    src={brand.src} 
-                    alt={`${brand.name} Accreditation`}
-                    className="max-w-full max-h-full object-contain group-hover:opacity-100 transition-all duration-500"
-                  />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </Reveal>
       </div>
     </section>
   );

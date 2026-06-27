@@ -6,7 +6,7 @@ import Link from "next/link";
 import { fadeUp, staggerContainer } from "@/lib/motion";
 
 export default function Hero() {
-  const heroImage = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop";
+  const heroImage = "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop";
   const certifications = [
     {
       name: "NICEIC",
@@ -76,7 +76,7 @@ export default function Hero() {
               for the UK's most demanding commercial and industrial environments.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="flex flex-wrap gap-4 items-stretch">
+            <motion.div variants={fadeUp} className="flex flex-wrap gap-4 items-stretch mb-8">
               <motion.div whileHover={{ y: -4 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href="/services"
@@ -95,28 +95,18 @@ export default function Hero() {
                 </Link>
               </motion.div>
             </motion.div>
-          </div>
-
-          <div className="mt-6 w-full">
-            <div className="surface-card relative overflow-hidden border border-white/55 rounded-[2rem] px-5 sm:px-7 py-2.5 shadow-[0_24px_60px_rgba(26,21,18,0.08)] backdrop-blur-xl">
-              <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/60 to-transparent" />
-              <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-8">
-                <p className="text-xs font-bold uppercase tracking-[0.28em] text-navy-900/55 whitespace-nowrap lg:min-w-fit">
-                  Certified & Accredited
-                </p>
-                <div className="grid flex-1 grid-cols-2 gap-3 md:grid-cols-4">
-                  {certifications.map((brand) => (
-                    <div key={brand.name} className="h-14 flex items-center justify-center px-2">
-                      <img
-                        src={brand.src}
-                        alt={brand.name}
-                        className="max-h-9 w-auto max-w-full object-contain"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            
+            <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] font-bold uppercase tracking-widest text-navy-900/80">
+              <span className="flex items-center gap-1.5"><span className="text-electric-yellow">25+</span> Years Experience</span>
+              <span className="text-navy-900/30 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> NICEIC Approved</span>
+              <span className="text-navy-900/30 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> CHAS Elite</span>
+              <span className="text-navy-900/30 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> Commercial Specialists</span>
+              <span className="text-navy-900/30 hidden lg:inline">•</span>
+              <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> Nationwide Projects</span>
+            </motion.div>
           </div>
         </motion.div>
       </div>
