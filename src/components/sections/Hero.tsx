@@ -29,19 +29,15 @@ export default function Hero() {
   return (
     <section className="relative min-h-[100svh] flex items-center overflow-hidden pt-32 sm:pt-36 pb-36">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <div 
-          className="absolute inset-0 transition-transform duration-[10s] scale-110"
-          style={{ 
-            backgroundImage: `url('${heroImage}')`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            animation: 'ken-burns 20s infinite alternate'
-          }}
+      <div className="absolute inset-0 z-0 bg-background">
+        <img 
+          src={heroImage}
+          alt="Commercial electrical infrastructure"
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] scale-110"
+          style={{ animation: 'ken-burns 20s infinite alternate' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
-        <div className="absolute inset-0 bg-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-background/20" />
         <div className="absolute inset-0 mesh-overlay opacity-40" />
         <motion.div
           animate={{ x: [0, 24, 0], y: [0, -18, 0] }}
