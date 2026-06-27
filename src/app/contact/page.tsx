@@ -34,7 +34,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-navy-900 font-black uppercase tracking-widest text-xs mb-2">Telephone</h4>
-                    <p className="text-2xl font-black text-navy-900 tracking-tight">01234 567 890</p>
+                    <p className="text-2xl font-black text-navy-900 tracking-tight">0161 766 6699</p>
                     <p className="text-sm text-navy-900/50">Mon-Fri, 8am - 5pm</p>
                   </div>
                 </div>
@@ -57,8 +57,8 @@ export default function ContactPage() {
                   <div>
                     <h4 className="text-navy-900 font-black uppercase tracking-widest text-xs mb-2">Office Location</h4>
                     <p className="text-xl font-bold text-navy-900 leading-relaxed">
-                      123 Business Park, Industrial Estate,<br />
-                      London, UK, SE1 7AB
+                      27 Old Market, Wisbech,<br />
+                      Cambridgeshire, PE13
                     </p>
                   </div>
                 </div>

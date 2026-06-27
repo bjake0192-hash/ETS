@@ -67,7 +67,7 @@ export function Footer() {
             <ul className="space-y-4 text-sm font-medium">
               <li className="flex items-start gap-3 text-white/60">
                 <MapPin size={18} className="text-electric-yellow shrink-0 mt-0.5" />
-                <span>123 Engineering Way,<br />Innovation Park,<br />London, UK</span>
+                <span>27 Old Market,<br />Wisbech,<br />Cambridgeshire, PE13</span>
               </li>
               <li>
                 <a href="tel:01617666699" className="flex items-center gap-3 text-white/60 hover:text-electric-yellow transition-colors">
@@ -104,6 +104,8 @@ export function Footer() {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-xs font-medium">
             © {new Date().getFullYear()} Electro Technical Systems (ETS) Ltd. All rights reserved.
+            <br className="block sm:hidden" />
+            <span className="hidden sm:inline"> | </span>Registered in England no: 08443192
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="text-white/40 hover:text-white transition-colors text-xs font-medium">
