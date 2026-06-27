@@ -24,38 +24,37 @@ const accreditations = [
 
 export function Footer() {
   return (
-    <footer className="bg-background pt-24 pb-12 border-t border-navy-900/10">
-      <div className="container mx-auto px-6">
+    <footer className="bg-charcoal-900 pt-20 pb-10 border-t border-white/5 relative overflow-hidden">
+      <div className="absolute inset-0 mesh-overlay opacity-20 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-electric-yellow/5 skew-x-12 translate-x-1/4 pointer-events-none" />
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           {/* Brand Col */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-8" aria-label="ETS Home">
-              <img
-                src="/etslogo.png"
-                alt="ETS logo"
-                className="h-16 md:h-20 w-auto object-contain"
+          <div className="space-y-6">
+            <Link href="/" className="inline-block bg-white/5 p-4 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+              <img 
+                src="/etslogo.png" 
+                alt="ETS logo" 
+                className="h-12 w-auto object-contain brightness-0 invert" 
               />
             </Link>
-            <p className="text-navy-900/60 text-sm leading-relaxed mb-8">
-              Premium commercial electrical contractors delivering engineering 
-              excellence across the UK. Established expertise, modern solutions.
+            <p className="text-white/60 text-sm leading-relaxed max-w-xs">
+              Premium electrical engineering and infrastructure solutions for commercial and industrial sectors across the UK.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-navy-900 font-black uppercase tracking-widest text-xs mb-8">Quick Links</h4>
+            <h4 className="text-white font-bold tracking-widest uppercase text-xs mb-6">Navigation</h4>
             <ul className="space-y-4">
-              {[
-                { name: "Services", href: "/services" },
-                { name: "About Us", href: "/about" },
-                { name: "Our Projects", href: "/projects" },
-                { name: "Sectors", href: "/sectors" },
-                { name: "Contact", href: "/contact" }
-              ].map((link) => (
-                <li key={link.name}>
-                  <Link href={link.href} className="text-navy-900/60 hover:text-electric-yellow transition-colors text-sm font-bold">
-                    {link.name}
+              {['Services', 'Projects', 'Sectors', 'About'].map((item) => (
+                <li key={item}>
+                  <Link 
+                    href={`/${item.toLowerCase()}`}
+                    className="text-white/60 hover:text-electric-yellow transition-colors text-sm font-medium"
+                  >
+                    {item}
                   </Link>
                 </li>
               ))}
@@ -64,36 +63,37 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-navy-900 font-black uppercase tracking-widest text-xs mb-8">Contact Info</h4>
-            <ul className="space-y-6">
-              <li className="flex gap-4">
-                <MapPin size={20} className="text-electric-yellow shrink-0" />
-                <span className="text-navy-900/60 text-sm font-medium">
-                  123 Business Park, Industrial Estate,<br />
-                  London, UK, SE1 7AB
-                </span>
+            <h4 className="text-white font-bold tracking-widest uppercase text-xs mb-6">Contact</h4>
+            <ul className="space-y-4 text-sm font-medium">
+              <li className="flex items-start gap-3 text-white/60">
+                <MapPin size={18} className="text-electric-yellow shrink-0 mt-0.5" />
+                <span>123 Engineering Way,<br />Innovation Park,<br />London, UK</span>
               </li>
-              <li className="flex gap-4">
-                <Phone size={20} className="text-electric-yellow shrink-0" />
-                <span className="text-navy-900/60 text-sm font-medium">01234 567 890</span>
+              <li>
+                <a href="tel:01234567890" className="flex items-center gap-3 text-white/60 hover:text-electric-yellow transition-colors">
+                  <Phone size={18} className="text-electric-yellow shrink-0" />
+                  <span>01234 567 890</span>
+                </a>
               </li>
-              <li className="flex gap-4">
-                <Mail size={20} className="text-electric-yellow shrink-0" />
-                <span className="text-navy-900/60 text-sm font-medium">info@ets-ltd.com</span>
+              <li>
+                <a href="mailto:info@ets-ltd.co.uk" className="flex items-center gap-3 text-white/60 hover:text-electric-yellow transition-colors">
+                  <Mail size={18} className="text-electric-yellow shrink-0" />
+                  <span>info@ets-ltd.co.uk</span>
+                </a>
               </li>
             </ul>
           </div>
 
-          {/* Accreditations Small */}
+          {/* Accreditations */}
           <div>
-            <h4 className="text-navy-900 font-black uppercase tracking-widest text-xs mb-8">Accreditations</h4>
-            <div className="grid grid-cols-2 gap-4">
+            <h4 className="text-white font-bold tracking-widest uppercase text-xs mb-6">Accreditations</h4>
+            <div className="grid grid-cols-2 gap-3">
               {accreditations.map((brand) => (
-                <div key={brand.name} className="h-12 bg-[#fbf8f4] rounded border border-navy-900/10 flex items-center justify-center p-2 group hover:border-electric-yellow transition-colors">
+                <div key={brand.name} className="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center justify-center hover:bg-white/10 transition-colors">
                   <img 
                     src={brand.src} 
-                    alt={brand.name} 
-                    className="max-w-full max-h-full object-contain group-hover:opacity-100 transition-all duration-300" 
+                    alt={brand.name}
+                    className="max-w-full max-h-10 object-contain filter grayscale brightness-0 invert opacity-60 hover:opacity-100 transition-opacity" 
                   />
                 </div>
               ))}
@@ -101,13 +101,17 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-12 border-t border-navy-900/10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-navy-900/40 text-xs font-bold">
-            © {new Date().getFullYear()} Electro Technical Systems (ETS) Ltd. All Rights Reserved.
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-white/40 text-xs font-medium">
+            © {new Date().getFullYear()} Electro Technical Systems (ETS) Ltd. All rights reserved.
           </p>
-          <div className="flex gap-8">
-            <Link href="/privacy" className="text-navy-900/40 hover:text-navy-900 text-xs font-bold transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="text-navy-900/40 hover:text-navy-900 text-xs font-bold transition-colors">Terms of Service</Link>
+          <div className="flex items-center gap-6">
+            <Link href="/privacy" className="text-white/40 hover:text-white transition-colors text-xs font-medium">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="text-white/40 hover:text-white transition-colors text-xs font-medium">
+              Terms of Service
+            </Link>
           </div>
         </div>
       </div>

@@ -64,11 +64,8 @@ export default function FeaturedProjects() {
     <section className="py-20 bg-white/40 relative overflow-hidden border-t border-navy-900/10">
       <div className="container mx-auto px-6">
         <Reveal>
-          <span className="text-electric-yellow font-black tracking-widest uppercase text-sm mb-4 block text-center md:text-left">
-            FEATURED WORK
-          </span>
-          <h2 className="text-4xl md:text-5xl font-black text-navy-900 mb-12 tracking-tight text-center md:text-left">
-            DELIVERING AT <span className="text-navy-900/40">SCALE</span>
+          <h2 className="text-4xl md:text-5xl font-black text-navy-900 mb-12 tracking-tight text-center md:text-left uppercase">
+            FEATURED <span className="text-navy-900/40">WORK</span>
           </h2>
         </Reveal>
 
