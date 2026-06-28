@@ -120,8 +120,7 @@ export default function Hero() {
               <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> Nationwide Projects</span>
             </div>
             
-            <div className="flex items-center gap-3 shrink-0">
-              <span className="text-[11px] font-bold uppercase tracking-widest text-navy-900/50">Accreditations</span>
+            <div className="flex items-center shrink-0">
               <span className="relative h-10 w-28 flex items-center justify-center overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.img
