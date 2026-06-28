@@ -107,7 +107,7 @@ export default function Hero() {
             
           </div>
 
-          <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-center justify-between gap-6 w-full mt-12 pt-8 border-t border-navy-900/10">
+          <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-center justify-between gap-6 w-full mt-8">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] font-bold uppercase tracking-widest text-navy-900/80">
               <span className="flex items-center gap-1.5"><span className="text-electric-yellow">25+</span> Years Experience</span>
               <span className="text-navy-900/30 hidden sm:inline">•</span>
