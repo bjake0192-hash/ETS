@@ -122,7 +122,7 @@ export default function Hero() {
             
             <div className="flex items-center gap-3 shrink-0">
               <span className="text-[11px] font-bold uppercase tracking-widest text-navy-900/50">Accreditations</span>
-              <span className="relative h-8 w-24 flex items-center justify-center bg-white rounded-md shadow-sm overflow-hidden border border-navy-900/10">
+              <span className="relative h-10 w-28 flex items-center justify-center overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={activeCert}
@@ -132,7 +132,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -5 }}
                     transition={{ duration: 0.3 }}
-                    className="absolute w-full h-full object-contain p-1 mix-blend-multiply"
+                    className="absolute w-full h-full object-contain mix-blend-multiply"
                   />
                 </AnimatePresence>
               </span>
