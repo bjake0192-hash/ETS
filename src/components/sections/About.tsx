@@ -13,7 +13,7 @@ export default function About() {
     "Ongoing Maintenance & Compliance"
   ];
 
-  const aboutImage = "https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2070&auto=format&fit=crop";
+  const aboutImage = "/powering-infrastructure.jpg";
 
   return (
     <section id="about" className="py-20 bg-background overflow-hidden relative">
