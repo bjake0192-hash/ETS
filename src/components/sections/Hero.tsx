@@ -105,7 +105,10 @@ export default function Hero() {
               </motion.div>
             </motion.div>
             
-            <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] font-bold uppercase tracking-widest text-navy-900/80">
+          </div>
+
+          <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-center justify-between gap-6 w-full mt-12 pt-8 border-t border-navy-900/10">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] font-bold uppercase tracking-widest text-navy-900/80">
               <span className="flex items-center gap-1.5"><span className="text-electric-yellow">25+</span> Years Experience</span>
               <span className="text-navy-900/30 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> NICEIC Approved</span>
@@ -114,25 +117,27 @@ export default function Hero() {
               <span className="text-navy-900/30 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> Commercial Specialists</span>
               <span className="text-navy-900/30 hidden lg:inline">•</span>
-              <span className="flex items-center gap-1.5">
-                <span className="text-electric-yellow">✓</span> Nationwide Projects
-                <span className="relative h-5 w-16 ml-1 flex items-center justify-center bg-white rounded-sm shadow-sm overflow-hidden border border-navy-900/10">
-                  <AnimatePresence mode="wait">
-                    <motion.img
-                      key={activeCert}
-                      src={certifications[activeCert].src}
-                      alt={certifications[activeCert].name}
-                      initial={{ opacity: 0, y: 5 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -5 }}
-                      transition={{ duration: 0.3 }}
-                      className="absolute w-full h-full object-contain p-0.5 mix-blend-multiply"
-                    />
-                  </AnimatePresence>
-                </span>
+              <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> Nationwide Projects</span>
+            </div>
+            
+            <div className="flex items-center gap-3 shrink-0">
+              <span className="text-[11px] font-bold uppercase tracking-widest text-navy-900/50">Accreditations</span>
+              <span className="relative h-8 w-24 flex items-center justify-center bg-white rounded-md shadow-sm overflow-hidden border border-navy-900/10">
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={activeCert}
+                    src={certifications[activeCert].src}
+                    alt={certifications[activeCert].name}
+                    initial={{ opacity: 0, y: 5 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -5 }}
+                    transition={{ duration: 0.3 }}
+                    className="absolute w-full h-full object-contain p-1 mix-blend-multiply"
+                  />
+                </AnimatePresence>
               </span>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
 
