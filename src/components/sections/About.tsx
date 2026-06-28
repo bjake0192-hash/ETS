@@ -16,9 +16,9 @@ export default function About() {
   const aboutImage = "/powering-infrastructure.jpg";
 
   return (
-    <section id="about" className="py-20 bg-background overflow-hidden relative">
+    <section id="about" className="py-10 bg-background overflow-hidden relative">
       <div className="absolute inset-y-0 left-0 w-[34%] bg-electric-yellow/5 blur-3xl pointer-events-none" />
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 scale-90 origin-center">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Image Side */}
           <motion.div 
