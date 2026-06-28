@@ -89,11 +89,12 @@ export function Footer() {
             <h4 className="text-white font-bold tracking-widest uppercase text-xs mb-6">Accreditations</h4>
             <div className="grid grid-cols-2 gap-3">
               {accreditations.map((brand) => (
-                <div key={brand.name} className="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center justify-center hover:bg-white/10 transition-colors">
+                <div key={brand.name} className="bg-white rounded-xl p-3 flex items-center justify-center relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-charcoal-900/60 mix-blend-multiply transition-opacity group-hover:opacity-30 z-10" />
                   <img 
                     src={brand.src} 
                     alt={brand.name}
-                    className="max-w-full max-h-10 object-contain filter grayscale brightness-0 invert opacity-60 hover:opacity-100 transition-opacity" 
+                    className="max-w-full max-h-10 object-contain relative z-0" 
                   />
                 </div>
               ))}
