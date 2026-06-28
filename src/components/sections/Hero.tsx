@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { fadeUp, staggerContainer } from "@/lib/motion";
@@ -25,6 +26,15 @@ export default function Hero() {
       src: "/Constructionline-Gold-Logo.png",
     },
   ];
+
+  const [activeCert, setActiveCert] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveCert((prev) => (prev + 1) % certifications.length);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, [certifications.length]);
 
   return (
     <section className="relative min-h-[100svh] flex items-center overflow-hidden pt-32 sm:pt-36 pb-36">
@@ -104,7 +114,23 @@ export default function Hero() {
               <span className="text-navy-900/30 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> Commercial Specialists</span>
               <span className="text-navy-900/30 hidden lg:inline">•</span>
-              <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> Nationwide Projects</span>
+              <span className="flex items-center gap-1.5">
+                <span className="text-electric-yellow">✓</span> Nationwide Projects
+                <span className="relative h-5 w-16 ml-1 flex items-center justify-center bg-white rounded-sm shadow-sm overflow-hidden border border-navy-900/10">
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={activeCert}
+                      src={certifications[activeCert].src}
+                      alt={certifications[activeCert].name}
+                      initial={{ opacity: 0, y: 5 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -5 }}
+                      transition={{ duration: 0.3 }}
+                      className="absolute w-full h-full object-contain p-0.5 mix-blend-multiply"
+                    />
+                  </AnimatePresence>
+                </span>
+              </span>
             </motion.div>
           </div>
         </motion.div>
