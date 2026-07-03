@@ -113,7 +113,7 @@ export default function Hero() {
 
           <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-center justify-between gap-6 w-full mt-8 relative">
             {/* Soft lighter overlay behind the entire bottom row to illuminate text and logos */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[300%] bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.5)_0%,_rgba(255,255,255,0)_60%)] pointer-events-none -z-10" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[350%] bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.65)_0%,_rgba(255,255,255,0)_75%)] pointer-events-none -z-10" />
             
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] font-bold uppercase tracking-widest text-navy-900/80 relative z-10">
               <span className="flex items-center gap-1.5"><span className="text-electric-yellow">25+</span> Years Experience</span>
