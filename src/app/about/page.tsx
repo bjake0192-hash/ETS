@@ -110,13 +110,13 @@ export default function AboutPage() {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="w-full lg:w-1/2">
               <span className="text-electric-yellow font-black tracking-widest uppercase text-sm mb-4 block">The ETS Journey</span>
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-8 uppercase tracking-tight">25 Years of <br/><span className="text-white/40">Evolution</span></h2>
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-8 uppercase tracking-tight">Built on <br/><span className="text-white/40">Experience</span></h2>
               <div className="space-y-6 text-white/60 text-lg leading-relaxed">
                 <p>
-                  Established over two decades ago, Electro Technical Systems (ETS) Ltd began with a commitment to doing things right the first time. What started as a dedicated local contractor has grown into a formidable force in the commercial electrical sector.
+                  While Electro Technical Systems (ETS) Ltd in its current form was established in 2014, our foundation is built upon our founder's 25+ years of hands-on experience in complex electrical engineering.
                 </p>
                 <p>
-                  Our evolution has been driven by our ability to adapt to changing technologies, stringent compliance requirements, and the increasing complexity of modern commercial infrastructure.
+                  What started as a vision to raise the standard of commercial electrical contracting has grown into a formidable force in the industry. Our evolution has been driven by an unwavering commitment to technical precision and adaptability to changing compliance requirements.
                 </p>
                 <p>
                   Today, we operate nationwide, partnering with leading developers, retail brands, and industrial facility managers to power the environments that keep the UK moving.
@@ -127,22 +127,22 @@ export default function AboutPage() {
             <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4">
               <div className="space-y-4 pt-12">
                 <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
-                  <p className="text-3xl font-black text-electric-yellow mb-2">1990s</p>
-                  <p className="text-white/70 text-sm">Founded with a focus on local commercial installations and maintenance.</p>
+                  <p className="text-3xl font-black text-electric-yellow mb-2">25+</p>
+                  <p className="text-white/70 text-sm">Years of foundational industry experience driving our technical standards.</p>
                 </div>
                 <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
-                  <p className="text-3xl font-black text-electric-yellow mb-2">2010s</p>
-                  <p className="text-white/70 text-sm">Expanded to nationwide coverage, securing major retail and industrial contracts.</p>
+                  <p className="text-3xl font-black text-electric-yellow mb-2">2014</p>
+                  <p className="text-white/70 text-sm">ETS Ltd officially incorporated, focusing on high-end commercial installations.</p>
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
-                  <p className="text-3xl font-black text-electric-yellow mb-2">2000s</p>
-                  <p className="text-white/70 text-sm">Achieved NICEIC and CHAS accreditations, formalizing our safety-first approach.</p>
+                  <p className="text-3xl font-black text-electric-yellow mb-2">Growth</p>
+                  <p className="text-white/70 text-sm">Achieved top-tier accreditations (NICEIC, CHAS Elite) ensuring compliance-led delivery.</p>
                 </div>
                 <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
                   <p className="text-3xl font-black text-electric-yellow mb-2">Today</p>
-                  <p className="text-white/70 text-sm">Leading provider of EV infrastructure, smart building systems, and large-scale fit-outs.</p>
+                  <p className="text-white/70 text-sm">Leading nationwide provider of complex infrastructure and commercial fit-outs.</p>
                 </div>
               </div>
             </div>
