@@ -1,6 +1,7 @@
 import { Metadata } from "next";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import SubpageHero from "@/components/ui/SubpageHero";
+import ContactForm from "@/components/forms/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact ETS Ltd | Commercial Electrical Inquiry",
@@ -65,33 +66,8 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Simple Contact Form Placeholder */}
-            <div className="bg-[#fbf8f4] p-12 rounded-3xl border border-navy-900/10">
-              <h3 className="text-2xl font-black text-navy-900 mb-8 uppercase tracking-tight">Send a Message</h3>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-xs font-black text-navy-900/50 uppercase tracking-widest">Full Name</label>
-                    <input type="text" className="w-full bg-background border border-navy-900/20 rounded-lg px-4 py-3 text-navy-900 focus:border-electric-yellow outline-none transition-colors" placeholder="John Doe" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-xs font-black text-navy-900/50 uppercase tracking-widest">Company</label>
-                    <input type="text" className="w-full bg-background border border-navy-900/20 rounded-lg px-4 py-3 text-navy-900 focus:border-electric-yellow outline-none transition-colors" placeholder="Acme Corp" />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-black text-navy-900/50 uppercase tracking-widest">Email Address</label>
-                  <input type="email" className="w-full bg-background border border-navy-900/20 rounded-lg px-4 py-3 text-navy-900 focus:border-electric-yellow outline-none transition-colors" placeholder="john@company.com" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-black text-navy-900/50 uppercase tracking-widest">Message</label>
-                  <textarea rows={5} className="w-full bg-background border border-navy-900/20 rounded-lg px-4 py-3 text-navy-900 focus:border-electric-yellow outline-none transition-colors resize-none" placeholder="How can we help with your project?"></textarea>
-                </div>
-                <button type="submit" className="w-full bg-electric-yellow text-white py-4 rounded-lg font-black uppercase tracking-widest hover:bg-charcoal-800 transition-all">
-                  Send Inquiry
-                </button>
-              </form>
-            </div>
+            {/* Contact Form */}
+            <ContactForm />
           </div>
         </div>
       </section>
