@@ -11,11 +11,11 @@ export default function Hero() {
   const certifications = [
     {
       name: "NICEIC",
-      src: "/NICEIC-logo.jpg",
+      src: "/NICEIC-logo.png",
     },
     {
       name: "CHAS Elite",
-      src: "/chas%20elite.jpeg",
+      src: "/chas%20elite.png",
     },
     {
       name: "Avetta",
@@ -24,6 +24,10 @@ export default function Hero() {
     {
       name: "Constructionline Gold",
       src: "/Constructionline-Gold-Logo.png",
+    },
+    {
+      name: "OLEV Installer",
+      src: "/OLEVInstaller.png",
     },
   ];
 

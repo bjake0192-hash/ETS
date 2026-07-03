@@ -6,11 +6,11 @@ import Link from "next/link";
 const accreditations = [
   { 
     name: "NICEIC", 
-    src: "/NICEIC-logo.jpg"
+    src: "/NICEIC-logo.png"
   },
   { 
     name: "CHAS Elite", 
-    src: "/chas%20elite.jpeg"
+    src: "/chas%20elite.png"
   },
   { 
     name: "Avetta", 
@@ -19,6 +19,10 @@ const accreditations = [
   { 
     name: "Constructionline Gold", 
     src: "/Constructionline-Gold-Logo.png"
+  },
+  { 
+    name: "OLEV Installer", 
+    src: "/OLEVInstaller.png"
   }
 ];
 
@@ -88,8 +92,8 @@ export function Footer() {
           <div>
             <h4 className="text-white font-bold tracking-widest uppercase text-xs mb-6">Accreditations</h4>
             <div className="grid grid-cols-2 gap-3">
-              {accreditations.map((brand) => (
-                <div key={brand.name} className="bg-white rounded-xl p-3 flex items-center justify-center relative overflow-hidden group">
+              {accreditations.map((brand, idx) => (
+                <div key={brand.name} className={`bg-white rounded-xl p-3 flex items-center justify-center relative overflow-hidden group ${idx === 4 ? 'col-span-2' : ''}`}>
                   <div className="absolute inset-0 bg-charcoal-900/60 mix-blend-multiply transition-opacity group-hover:opacity-30 z-10" />
                   <img 
                     src={brand.src} 
