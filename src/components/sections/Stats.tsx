@@ -67,7 +67,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export default function Stats() {
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-background relative overflow-hidden border-b border-navy-900/10">
       <div className="absolute left-[10%] top-10 h-52 w-52 rounded-full bg-electric-yellow/8 blur-3xl" />
       <div className="container mx-auto px-6">
         {/* Stats Grid with Animation */}

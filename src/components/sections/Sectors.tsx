@@ -21,7 +21,7 @@ const sectors = [
 
 export default function Sectors() {
   return (
-    <section id="sectors" className="py-24 bg-background overflow-hidden">
+    <section id="sectors" className="py-12 md:py-16 bg-[#fbf8f4] overflow-hidden border-b border-navy-900/10">
       <div className="container mx-auto px-6 text-center mb-16">
         <span className="text-electric-yellow font-black tracking-widest uppercase text-sm mb-4 block">
           INDUSTRIES WE SERVE

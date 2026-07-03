@@ -7,7 +7,7 @@ import Reveal from "@/components/ui/Reveal";
 
 export default function CTA() {
   return (
-    <section id="contact" className="py-28 bg-background relative overflow-hidden">
+    <section id="contact" className="py-12 md:py-20 bg-background relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-electric-yellow/8 skew-x-12 translate-x-1/4" />
       <div className="absolute inset-0 mesh-overlay opacity-30" />

@@ -82,7 +82,7 @@ export default function ServicesGrid() {
   }, [isPaused]);
 
   return (
-    <section id="services" className="py-28 bg-charcoal-900/5 relative overflow-hidden">
+    <section id="services" className="py-12 md:py-16 bg-[#fbf8f4] relative overflow-hidden border-b border-navy-900/10">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/30 to-transparent" />
       <div className="absolute top-24 left-[8%] h-40 w-40 rounded-full bg-electric-yellow/10 blur-3xl pointer-events-none" />
       <div className="absolute bottom-16 right-[10%] h-52 w-52 rounded-full bg-charcoal-900/8 blur-3xl pointer-events-none" />

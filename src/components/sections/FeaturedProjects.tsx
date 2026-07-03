@@ -61,7 +61,7 @@ export default function FeaturedProjects() {
   }, [isPaused]);
 
   return (
-    <section className="py-20 bg-white/40 relative overflow-hidden border-t border-navy-900/10">
+    <section className="py-12 md:py-16 bg-[#fbf8f4] relative overflow-hidden border-b border-navy-900/10">
       <div className="container mx-auto px-6">
         <Reveal>
           <h2 className="text-4xl md:text-5xl font-black text-navy-900 mb-6 tracking-tight text-center md:text-left uppercase">
