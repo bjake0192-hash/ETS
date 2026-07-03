@@ -111,8 +111,11 @@ export default function Hero() {
             
           </div>
 
-          <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-center justify-between gap-6 w-full mt-8">
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] font-bold uppercase tracking-widest text-navy-900/80">
+          <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-center justify-between gap-6 w-full mt-8 relative">
+            {/* Soft lighter overlay behind the entire bottom row to illuminate text and logos */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[300%] bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.5)_0%,_rgba(255,255,255,0)_60%)] pointer-events-none -z-10" />
+            
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] font-bold uppercase tracking-widest text-navy-900/80 relative z-10">
               <span className="flex items-center gap-1.5"><span className="text-electric-yellow">25+</span> Years Experience</span>
               <span className="text-navy-900/30 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> NICEIC Approved</span>
@@ -124,10 +127,7 @@ export default function Hero() {
               <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> Nationwide Projects</span>
             </div>
             
-            <div className="flex items-center shrink-0 relative">
-              {/* Very soft, subtle lighter overlay behind the carousel to illuminate the logos */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[160%] h-[160%] bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.4)_0%,_rgba(255,255,255,0)_60%)] pointer-events-none" />
-              
+            <div className="flex items-center shrink-0 relative z-10">
               <span className="relative h-16 w-44 flex items-center justify-center overflow-hidden z-10">
                 <AnimatePresence mode="wait">
                   <motion.img
