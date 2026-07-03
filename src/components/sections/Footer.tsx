@@ -74,9 +74,9 @@ export function Footer() {
                 <span>27 Old Market,<br />Wisbech,<br />Cambridgeshire, PE13</span>
               </li>
               <li>
-                <a href="tel:01617666699" className="flex items-center gap-3 text-white/60 hover:text-electric-yellow transition-colors">
+                <a href="tel:01553631759" className="flex items-center gap-3 text-white/60 hover:text-electric-yellow transition-colors">
                   <Phone size={18} className="text-electric-yellow shrink-0" />
-                  <span>0161 766 6699</span>
+                  <span>01553 631 759</span>
                 </a>
               </li>
               <li>

@@ -44,13 +44,13 @@ export default function CTA() {
                   <ArrowRight size={20} />
                 </Link>
               </motion.div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-navy-900/5 flex items-center justify-center border border-navy-900/10">
+              <div className="flex items-center gap-4 bg-white/50 backdrop-blur-sm px-6 py-4 rounded-xl border border-navy-900/10">
+                <div className="w-12 h-12 bg-navy-900/5 rounded-full flex items-center justify-center">
                   <Phone size={20} className="text-electric-yellow" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-navy-900/50 uppercase tracking-widest">Call Us</p>
-                  <p className="text-navy-900 font-black text-lg">0161 766 6699</p>
+                  <p className="text-xs font-bold uppercase tracking-widest text-navy-900/50 mb-1">Call Us Directly</p>
+                  <p className="text-navy-900 font-black text-lg">01553 631 759</p>
                 </div>
               </div>
             </div>

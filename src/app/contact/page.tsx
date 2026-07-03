@@ -35,7 +35,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-navy-900 font-black uppercase tracking-widest text-xs mb-2">Telephone</h4>
-                    <p className="text-2xl font-black text-navy-900 tracking-tight">0161 766 6699</p>
+                    <p className="text-2xl font-black text-navy-900 tracking-tight">01553 631 759</p>
                     <p className="text-sm text-navy-900/50">Mon-Fri, 8am - 5pm</p>
                   </div>
                 </div>
