@@ -125,8 +125,8 @@ export default function Hero() {
             </div>
             
             <div className="flex items-center shrink-0 relative">
-              {/* Soft lighter overlay behind the carousel to illuminate the logos */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[180%] h-[180%] bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.85)_0%,_rgba(255,255,255,0)_70%)] pointer-events-none" />
+              {/* Very soft, subtle lighter overlay behind the carousel to illuminate the logos */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[160%] h-[160%] bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.4)_0%,_rgba(255,255,255,0)_60%)] pointer-events-none" />
               
               <span className="relative h-16 w-44 flex items-center justify-center overflow-hidden z-10">
                 <AnimatePresence mode="wait">
