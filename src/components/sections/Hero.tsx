@@ -42,7 +42,7 @@ export default function Hero() {
     
     const wordInterval = setInterval(() => {
       setWordIndex((prev) => (prev + 1) % words.length);
-    }, 4000);
+    }, 2500);
 
     return () => {
       clearInterval(certInterval);
