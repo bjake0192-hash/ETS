@@ -79,7 +79,7 @@ export default function ProjectsPage() {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="text-electric-yellow font-black tracking-widest uppercase text-sm mb-4 block">Case Studies</span>
-            <h2 className="text-4xl md:text-5xl font-black text-navy-900 tracking-tighter uppercase mb-6">Proven <span className="text-navy-900/40">Delivery</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black text-navy-900 tracking-tighter uppercase mb-6">Proven <span className="text-navy-900/60">Delivery</span></h2>
             <p className="text-lg text-navy-900/70 leading-relaxed">
               Explore our extensive track record of delivering complex electrical installations 
               on time and within budget, across a variety of demanding sectors.
@@ -107,7 +107,7 @@ export default function ProjectsPage() {
                   
                   <div className="flex items-center justify-between pt-6 border-t border-navy-900/10">
                     <div>
-                      <p className="text-[10px] text-navy-900/40 uppercase tracking-widest font-bold mb-1">Project Value</p>
+                      <p className="text-[10px] text-navy-900/60 uppercase tracking-widest font-bold mb-1">Project Value</p>
                       <p className="text-navy-900 font-black">{study.value}</p>
                     </div>
                     <div className="w-10 h-10 rounded-full bg-navy-900/5 flex items-center justify-center group-hover:bg-electric-yellow transition-colors duration-300">

@@ -50,7 +50,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-bold tracking-widest uppercase text-xs mb-6">Navigation</h4>
+            <h3 className="text-white font-bold tracking-widest uppercase text-xs mb-6">Navigation</h3>
             <ul className="space-y-4">
               {['Services', 'Projects', 'Sectors', 'About'].map((item) => (
                 <li key={item}>
@@ -67,7 +67,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-white font-bold tracking-widest uppercase text-xs mb-6">Contact</h4>
+            <h3 className="text-white font-bold tracking-widest uppercase text-xs mb-6">Contact</h3>
             <ul className="space-y-4 text-sm font-medium">
               <li className="flex items-start gap-3 text-white/60">
                 <MapPin size={18} className="text-electric-yellow shrink-0 mt-0.5" />
@@ -90,7 +90,7 @@ export function Footer() {
 
           {/* Accreditations */}
           <div>
-            <h4 className="text-white font-bold tracking-widest uppercase text-xs mb-6">Accreditations</h4>
+            <h3 className="text-white font-bold tracking-widest uppercase text-xs mb-6">Accreditations</h3>
             <div className="grid grid-cols-2 gap-3">
               {accreditations.map((brand, idx) => (
                 <div key={brand.name} className={`bg-white rounded-xl p-3 flex items-center justify-center relative overflow-hidden group ${idx === 4 ? 'col-span-2' : ''}`}>

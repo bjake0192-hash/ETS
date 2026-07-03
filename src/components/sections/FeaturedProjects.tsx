@@ -65,7 +65,7 @@ export default function FeaturedProjects() {
       <div className="container mx-auto px-6">
         <Reveal>
           <h2 className="text-4xl md:text-5xl font-black text-navy-900 mb-6 tracking-tight text-center md:text-left uppercase">
-            FEATURED <span className="text-navy-900/40">WORK</span>
+            FEATURED <span className="text-navy-900/60">WORK</span>
           </h2>
         </Reveal>
 
@@ -112,16 +112,18 @@ export default function FeaturedProjects() {
               </AnimatePresence>
 
               {/* Navigation Dots */}
-              <div className="absolute bottom-0 left-0 flex gap-3">
+              <div className="absolute bottom-0 left-0 flex gap-1">
                 {featuredProjects.map((_, idx) => (
                   <button
                     key={idx}
                     onClick={() => setActiveIndex(idx)}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${
-                      idx === activeIndex ? "w-8 bg-electric-yellow" : "w-2 bg-navy-900/20 hover:bg-navy-900/40"
-                    }`}
+                    className="p-2"
                     aria-label={`View project ${idx + 1}`}
-                  />
+                  >
+                    <div className={`h-1.5 rounded-full transition-all duration-300 ${
+                      idx === activeIndex ? "w-8 bg-electric-yellow" : "w-2 bg-navy-900/20 hover:bg-navy-900/40"
+                    }`} />
+                  </button>
                 ))}
               </div>
             </div>

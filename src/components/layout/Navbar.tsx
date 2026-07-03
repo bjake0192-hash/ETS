@@ -89,6 +89,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.94 }}
             className="md:hidden text-navy-900"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </motion.button>

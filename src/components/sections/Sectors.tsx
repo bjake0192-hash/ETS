@@ -55,7 +55,7 @@ export default function Sectors() {
       </div>
 
       {/* Background Text */}
-      <div className="absolute left-0 w-full overflow-hidden pointer-events-none opacity-[0.04] select-none text-navy-900">
+      <div className="absolute left-0 w-full overflow-hidden pointer-events-none opacity-[0.04] select-none text-navy-900" aria-hidden="true">
         <div className="whitespace-nowrap text-[20vw] font-black leading-none">
           COMMERCIAL INDUSTRIAL INFRASTRUCTURE
         </div>

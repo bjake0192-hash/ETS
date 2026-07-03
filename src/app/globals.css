@@ -8,7 +8,7 @@
   --color-navy-800: #736a63;
   --color-charcoal-900: #2a241f;
   --color-charcoal-800: #5d554e;
-  --color-electric-yellow: #a86126;
+  --color-electric-yellow: #914c19;
   
   --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
   --font-mono: "SFMono-Regular", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
@@ -17,7 +17,7 @@
 :root {
   --background: #f3f0ec;
   --foreground: #1a1512;
-  --accent: #a86126;
+  --accent: #914c19;
 }
 
 body {

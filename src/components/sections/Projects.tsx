@@ -43,7 +43,7 @@ export default function Projects() {
             SELECTED WORK
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-navy-900 leading-tight tracking-[-0.03em]">
-            POWERING <span className="text-navy-900/40">LANDMARKS</span>
+            POWERING <span className="text-navy-900/60">LANDMARKS</span>
           </h2>
           <p className="mt-6 text-navy-900/65 max-w-xl leading-relaxed">
             Featured projects presented with a sharper editorial layout, deeper image treatment,

@@ -59,7 +59,7 @@ export default function TrustBar() {
                 />
               </div>
               <div className="relative z-10">
-                <h3 className="text-navy-900 font-bold tracking-tight mb-1 text-sm uppercase">{item.title}</h3>
+                <p className="text-navy-900 font-bold tracking-tight mb-1 text-sm uppercase">{item.title}</p>
                 <p className="text-xs text-navy-900/60 leading-snug">{item.description}</p>
               </div>
             </motion.div>

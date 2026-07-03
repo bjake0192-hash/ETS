@@ -51,7 +51,7 @@ export default function About() {
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-navy-900 leading-[0.95] mb-8 tracking-[-0.03em]">
               POWERING COMMERCIAL <br />
-              <span className="text-navy-900/40">INFRASTRUCTURE</span>
+              <span className="text-navy-900/60">INFRASTRUCTURE</span>
             </h2>
             <p className="text-lg text-navy-900/70 mb-8 leading-relaxed">
               At Electro Technical Systems (ETS) Ltd, we have evolved from a local electrical 

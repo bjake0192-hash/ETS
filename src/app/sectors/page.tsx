@@ -74,7 +74,7 @@ export default function SectorsPage() {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="text-electric-yellow font-black tracking-widest uppercase text-sm mb-4 block">Industry Expertise</span>
-            <h2 className="text-4xl md:text-5xl font-black text-navy-900 tracking-tighter uppercase mb-6">Cross-Sector <span className="text-navy-900/40">Capability</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black text-navy-900 tracking-tighter uppercase mb-6">Cross-Sector <span className="text-navy-900/60">Capability</span></h2>
             <p className="text-lg text-navy-900/70 leading-relaxed">
               We understand that every sector has distinct operational demands, compliance standards, 
               and working environments. Our specialized teams are trained to adapt to these unique requirements.
