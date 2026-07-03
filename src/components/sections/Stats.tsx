@@ -70,30 +70,6 @@ export default function Stats() {
     <section className="py-24 bg-background relative overflow-hidden">
       <div className="absolute left-[10%] top-10 h-52 w-52 rounded-full bg-electric-yellow/8 blur-3xl" />
       <div className="container mx-auto px-6">
-        
-        {/* Accreditations Row (Merged Conceptual Layout) */}
-        <Reveal className="mb-20">
-          <div className="surface-card relative overflow-hidden border border-white/55 rounded-[2rem] px-6 sm:px-10 py-5 shadow-[0_24px_60px_rgba(26,21,18,0.08)] backdrop-blur-xl">
-            <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/60 to-transparent" />
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-12">
-              <p className="text-xs font-bold uppercase tracking-[0.28em] text-navy-900/55 whitespace-nowrap lg:min-w-fit">
-                Certified & Accredited
-              </p>
-              <div className="grid flex-1 grid-cols-2 gap-6 md:grid-cols-4">
-                {accreditations.map((brand) => (
-                  <div key={brand.name} className="h-16 flex items-center justify-center px-4 mix-blend-multiply">
-                    <img
-                      src={brand.src}
-                      alt={brand.name}
-                      className="max-h-12 w-auto max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Reveal>
-
         {/* Stats Grid with Animation */}
         <motion.div
           variants={staggerContainer}

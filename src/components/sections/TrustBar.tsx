@@ -51,7 +51,7 @@ export default function TrustBar() {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/50 to-background/30 group-hover:from-electric-yellow/15 group-hover:via-background/60 group-hover:to-background/50 transition-colors duration-500" />
               <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/65 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="relative z-10 h-12 w-full flex items-center justify-start mb-2">
+              <div className="relative z-10 h-16 w-full flex items-center justify-start mb-2">
                 <img 
                   src={item.image} 
                   alt={item.title}
@@ -59,7 +59,6 @@ export default function TrustBar() {
                 />
               </div>
               <div className="relative z-10">
-                <p className="text-navy-900 font-bold tracking-tight mb-1 text-sm uppercase">{item.title}</p>
                 <p className="text-xs text-navy-900/60 leading-snug">{item.description}</p>
               </div>
             </motion.div>

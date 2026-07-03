@@ -31,14 +31,24 @@ export default function Hero() {
     },
   ];
 
+  const words = ["COMMERCIAL", "RESIDENTIAL"];
   const [activeCert, setActiveCert] = useState(0);
+  const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const certInterval = setInterval(() => {
       setActiveCert((prev) => (prev + 1) % certifications.length);
     }, 3500);
-    return () => clearInterval(interval);
-  }, [certifications.length]);
+    
+    const wordInterval = setInterval(() => {
+      setWordIndex((prev) => (prev + 1) % words.length);
+    }, 4000);
+
+    return () => {
+      clearInterval(certInterval);
+      clearInterval(wordInterval);
+    };
+  }, [certifications.length, words.length]);
 
   return (
     <section className="relative min-h-[100svh] flex items-center overflow-hidden pt-32 sm:pt-36 pb-36">
@@ -75,11 +85,24 @@ export default function Hero() {
           <div className="max-w-4xl">
             <motion.h1
               variants={fadeUp}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.6rem] xl:text-[5.2rem] font-black text-navy-900 leading-[0.9] tracking-[-0.04em] mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.6rem] xl:text-[5.2rem] font-black text-navy-900 leading-[0.9] tracking-[-0.04em] mb-6 flex flex-col items-start"
             >
-              COMMERCIAL <br />
-              <span className="text-electric-yellow">ELECTRICAL</span> <br />
-              SPECIALISTS
+              <span className="inline-grid overflow-hidden h-[1em]">
+                <AnimatePresence mode="popLayout">
+                  <motion.span
+                    key={wordIndex}
+                    initial={{ y: "100%", opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: "-100%", opacity: 0 }}
+                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                    className="col-start-1 row-start-1"
+                  >
+                    {words[wordIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
+              <span className="text-electric-yellow">ELECTRICAL</span>
+              <span>SPECIALISTS</span>
             </motion.h1>
             <motion.p
               variants={fadeUp}
