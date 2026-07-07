@@ -9,12 +9,8 @@ const accreditations = [
     src: "/NICEIC-logo.png"
   },
   { 
-    name: "CHAS Elite", 
-    src: "/chas%20elite.png"
-  },
-  { 
-    name: "Avetta", 
-    src: "/avetta-member-logo.png"
+    name: "SafeContractor", 
+    src: "/safecontractor.png"
   },
   { 
     name: "Constructionline Gold", 
@@ -92,8 +88,8 @@ export function Footer() {
           <div>
             <h3 className="text-white font-bold tracking-widest uppercase text-xs mb-6">Accreditations</h3>
             <div className="grid grid-cols-2 gap-3">
-              {accreditations.map((brand, idx) => (
-                <div key={brand.name} className={`bg-white rounded-xl p-3 flex items-center justify-center relative overflow-hidden group ${idx === 4 ? 'col-span-2' : ''}`}>
+              {accreditations.map((brand) => (
+                <div key={brand.name} className="bg-white rounded-xl p-3 flex items-center justify-center relative overflow-hidden group">
                   <div className="absolute inset-0 bg-charcoal-900/60 mix-blend-multiply transition-opacity group-hover:opacity-30 z-10" />
                   <img 
                     src={brand.src} 

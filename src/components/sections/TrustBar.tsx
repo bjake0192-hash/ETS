@@ -10,14 +10,9 @@ const trustItems = [
     image: "/NICEIC-logo.png"
   },
   {
-    title: "CHAS Elite",
-    description: "Advanced health and safety compliance and risk management.",
-    image: "/chas%20elite.png"
-  },
-  {
-    title: "Avetta Certified",
-    description: "Pre-qualified supply chain risk management and safety.",
-    image: "/avetta-member-logo.png"
+    title: "SafeContractor",
+    description: "Verified health and safety excellence and supply chain compliance.",
+    image: "/safecontractor.png"
   },
   {
     title: "Constructionline Gold",
@@ -41,7 +36,7 @@ export default function TrustBar() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10"
         >
           {trustItems.map((item, index) => (
             <motion.div

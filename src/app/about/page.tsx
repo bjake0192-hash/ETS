@@ -58,7 +58,7 @@ export default function AboutPage() {
               <div className="space-y-4">
                 {[
                   "NICEIC Approved Contractor Status",
-                  "CHAS Elite Compliance",
+                  "SafeContractor Certified",
                   "Nationwide Project Delivery",
                   "Specialized Commercial Focus"
                 ].map((item, i) => (
@@ -138,7 +138,7 @@ export default function AboutPage() {
               <div className="space-y-4">
                 <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
                   <p className="text-3xl font-black text-electric-yellow mb-2">Growth</p>
-                  <p className="text-white/70 text-sm">Achieved top-tier accreditations (NICEIC, CHAS Elite) ensuring compliance-led delivery.</p>
+                  <p className="text-white/70 text-sm">Achieved top-tier accreditations (NICEIC, SafeContractor) ensuring compliance-led delivery.</p>
                 </div>
                 <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
                   <p className="text-3xl font-black text-electric-yellow mb-2">Today</p>

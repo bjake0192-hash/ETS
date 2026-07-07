@@ -12,29 +12,6 @@ const stats = [
   { label: "Skilled Engineers", value: 40, suffix: "+" }
 ];
 
-const accreditations = [
-  { 
-    name: "NICEIC", 
-    src: "/NICEIC-logo.jpg",
-    width: "w-24"
-  },
-  { 
-    name: "CHAS Elite", 
-    src: "/chas%20elite.jpeg",
-    width: "w-24"
-  },
-  { 
-    name: "Avetta", 
-    src: "/avetta-member-logo.png",
-    width: "w-24"
-  },
-  { 
-    name: "Constructionline Gold", 
-    src: "/Constructionline-Gold-Logo.png",
-    width: "w-32"
-  }
-];
-
 function Counter({ value, suffix }: { value: number; suffix: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
