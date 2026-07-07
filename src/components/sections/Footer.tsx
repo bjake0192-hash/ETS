@@ -76,9 +76,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@ets-ltd.co.uk" className="flex items-center gap-3 text-white/60 hover:text-electric-yellow transition-colors">
+                <a href="mailto:info@ets-ltd.com" className="flex items-center gap-3 text-white/60 hover:text-electric-yellow transition-colors">
                   <Mail size={18} className="text-electric-yellow shrink-0" />
-                  <span>info@ets-ltd.co.uk</span>
+                  <span>info@ets-ltd.com</span>
                 </a>
               </li>
             </ul>
