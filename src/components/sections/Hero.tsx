@@ -14,12 +14,8 @@ export default function Hero() {
       src: "/NICEIC-logo.png",
     },
     {
-      name: "CHAS Elite",
-      src: "/chas%20elite.png",
-    },
-    {
-      name: "Avetta",
-      src: "/avetta-member-logo.png",
+      name: "SafeContractor",
+      src: "/safecontractor.png",
     },
     {
       name: "Constructionline Gold",
@@ -143,7 +139,7 @@ export default function Hero() {
               <span className="text-navy-900/30 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> NICEIC Approved</span>
               <span className="text-navy-900/30 hidden sm:inline">•</span>
-              <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> CHAS Elite</span>
+              <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> SafeContractor</span>
               <span className="text-navy-900/30 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> Commercial Specialists</span>
               <span className="text-navy-900/30 hidden lg:inline">•</span>
