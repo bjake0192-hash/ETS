@@ -157,7 +157,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -5 }}
                     transition={{ duration: 0.3 }}
-                    className="absolute w-full h-full object-contain mix-blend-multiply"
+                    className="absolute w-full h-full object-contain"
                   />
                 </AnimatePresence>
               </span>
