@@ -14,7 +14,7 @@ export default function Hero() {
       src: "/NICEIC-logo.png",
     },
     {
-      name: "SafeContractor",
+      name: "Certified SafeContractor",
       src: "/safecontractor.png",
     },
     {
@@ -139,7 +139,7 @@ export default function Hero() {
               <span className="text-navy-900/30 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> NICEIC Approved</span>
               <span className="text-navy-900/30 hidden sm:inline">•</span>
-              <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> SafeContractor</span>
+              <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> Certified SafeContractor</span>
               <span className="text-navy-900/30 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> Commercial Specialists</span>
               <span className="text-navy-900/30 hidden lg:inline">•</span>
