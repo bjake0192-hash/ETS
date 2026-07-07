@@ -1,4 +1,8 @@
+"use client";
+
 import { Metadata } from "next";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import SubpageHero from "@/components/ui/SubpageHero";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import CTA from "@/components/sections/CTA";
@@ -15,29 +19,38 @@ const detailedServices = [
     title: "Commercial Installations",
     description: "End-to-end electrical design and installation for large-scale commercial spaces, office fit-outs, and retail environments. We ensure minimal disruption and maximum operational efficiency.",
     features: ["Office Fit-outs & Refurbishments", "Retail & Hospitality Systems", "Custom Lighting Design", "Power Distribution"],
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
+    image: "/services2.jpg"
   },
   {
     title: "Industrial Infrastructure",
     description: "Robust power solutions designed to withstand the harsh conditions of manufacturing facilities, warehouses, and logistics hubs.",
     features: ["High Voltage Systems", "Machinery Connections", "Warehouse Lighting", "Control Panel Wiring"],
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop"
+    image: "/services1.jpg"
   },
   {
     title: "EV Fleet Charging",
     description: "As an OLEV approved installer, we provide scalable electric vehicle charging infrastructure for commercial fleets, public car parks, and workplace environments.",
     features: ["Site Capacity Assessments", "Multi-Point Installations", "Load Balancing Systems", "Ongoing Maintenance"],
-    image: "https://images.unsplash.com/photo-1620803593652-19e340a631e8?q=80&w=2069&auto=format&fit=crop"
+    images: ["/charger1.jpg", "/charger2.jpg", "/charger3.jpg"]
   },
   {
     title: "Testing & Compliance",
     description: "Rigorous inspection and testing services to ensure your facilities remain 100% compliant with the latest BS7671 electrical safety regulations.",
     features: ["EICR Certificates", "Emergency Lighting Tests", "Thermal Imaging", "PAT Testing"],
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"
+    image: "/lighting2.jpg"
   }
 ];
 
 export default function ServicesPage() {
+  const [activeChargerIndex, setActiveChargerIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveChargerIndex((prev: number) => (prev + 1) % 3);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <main>
       <SubpageHero 
@@ -66,13 +79,36 @@ export default function ServicesPage() {
                 {/* Image Side */}
                 <div className="w-full lg:w-1/2 relative group">
                   <div className="absolute inset-0 bg-electric-yellow/20 rounded-[2rem] translate-x-4 translate-y-4 -z-10 transition-transform group-hover:translate-x-6 group-hover:translate-y-6" />
-                  <div className="aspect-[4/3] rounded-[2rem] overflow-hidden border border-navy-900/10 shadow-xl relative">
+                  <div className="aspect-[4/3] rounded-[2rem] overflow-hidden border border-navy-900/10 shadow-xl relative bg-navy-900/5">
                     <div className="absolute inset-0 bg-navy-900/10 mix-blend-multiply z-10 transition-opacity group-hover:opacity-0" />
-                    <img 
-                      src={service.image} 
-                      alt={service.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
+                    {service.images ? (
+                      <AnimatePresence mode="wait">
+                        <motion.img 
+                          key={activeChargerIndex}
+                          src={service.images[activeChargerIndex]} 
+                          alt={`${service.title} ${activeChargerIndex + 1}`}
+                          initial={{ opacity: 0, scale: 1.1 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 0.95 }}
+                          transition={{ duration: 0.8, ease: "easeOut" }}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                          {service.images.map((_, i) => (
+                            <div 
+                              key={i} 
+                              className={`h-1.5 transition-all duration-300 rounded-full ${i === activeChargerIndex ? 'w-8 bg-electric-yellow' : 'w-2 bg-white/50'}`} 
+                            />
+                          ))}
+                        </div>
+                      </AnimatePresence>
+                    ) : (
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    )}
                   </div>
                 </div>
 
