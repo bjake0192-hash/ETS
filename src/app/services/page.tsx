@@ -128,13 +128,13 @@ export default function ServicesPage() {
                     ))}
                   </div>
 
-                  <Link 
+                  {/* <Link 
                     href="/projects"
                     className="inline-flex items-center gap-2 text-electric-yellow font-black tracking-wider uppercase hover:text-navy-900 transition-colors group"
                   >
                     View Related Projects
                     <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                  </Link> */}
                 </div>
 
               </div>

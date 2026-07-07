@@ -118,14 +118,14 @@ export default function Hero() {
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
-              <motion.div whileHover={{ y: -4 }} whileTap={{ scale: 0.98 }}>
+              {/* <motion.div whileHover={{ y: -4 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href="/projects"
                   className="surface-card px-8 h-14 rounded-full border border-navy-900/15 text-navy-900 font-black hover:bg-navy-900/5 transition-all inline-flex items-center justify-center whitespace-nowrap"
                 >
                   VIEW PROJECTS
                 </Link>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
             
           </div>

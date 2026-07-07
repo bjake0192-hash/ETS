@@ -14,7 +14,7 @@ export default function Home() {
       <TrustBar />
       
       {/* Home page serves as a high-level summary of all capabilities */}
-      <FeaturedProjects />
+      {/* <FeaturedProjects /> */}
       <About />
       <ServicesGrid />
       <Stats />
