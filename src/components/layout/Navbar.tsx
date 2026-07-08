@@ -98,38 +98,47 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -16 }}
-            transition={{ duration: 0.28, ease: "easeOut" }}
-            className="md:hidden absolute top-full left-0 w-full px-6 pt-4"
-          >
-            <div className="surface-card border border-white/40 rounded-3xl p-5 flex flex-col gap-3">
-              {navLinks.map((link) => (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="md:hidden fixed inset-0 bg-navy-900/20 backdrop-blur-sm z-[-1]"
+            />
+            <motion.div
+              initial={{ opacity: 0, y: -16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.28, ease: "easeOut" }}
+              className="md:hidden absolute top-full left-0 w-full px-6 pt-4"
+            >
+              <div className="surface-card border border-white/40 rounded-3xl p-5 flex flex-col gap-3 shadow-2xl shadow-navy-900/10">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={cn(
+                      "text-lg font-bold rounded-2xl px-5 py-4 transition-all active:scale-95",
+                      pathname === link.href
+                        ? "bg-electric-yellow/12 text-navy-900 border border-electric-yellow/20"
+                        : "text-navy-900/80 hover:text-electric-yellow hover:bg-navy-900/[0.04]"
+                    )}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
                 <Link
-                  key={link.name}
-                  href={link.href}
+                  href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={cn(
-                    "text-lg font-medium rounded-2xl px-4 py-3 transition-colors",
-                    pathname === link.href
-                      ? "bg-electric-yellow/10 text-navy-900"
-                      : "text-navy-900 hover:text-electric-yellow hover:bg-navy-900/[0.04]"
-                  )}
+                  className="bg-electric-yellow text-white px-6 py-4 rounded-2xl font-black text-center mt-2 shadow-[0_12px_24px_rgba(168,97,38,0.25)] active:scale-95 transition-transform"
                 >
-                  {link.name}
+                  Get a Quote
                 </Link>
-              ))}
-              <Link
-                href="/contact"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="bg-electric-yellow text-white px-6 py-3 rounded-2xl font-bold text-center mt-2"
-              >
-                Get a Quote
-              </Link>
-            </div>
-          </motion.div>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.nav>

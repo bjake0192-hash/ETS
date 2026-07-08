@@ -13,7 +13,7 @@ export default function CTA() {
       <div className="absolute inset-0 mesh-overlay opacity-30" />
       
       <Reveal className="container mx-auto px-6 relative z-10">
-        <div className="surface-card rounded-[2rem] p-12 md:p-24 border border-white/45 relative overflow-hidden">
+        <div className="surface-card rounded-[2rem] p-8 sm:p-12 md:p-24 border border-white/45 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-electric-yellow/8 via-transparent to-charcoal-900/5" />
           <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/80 to-transparent" />
           <motion.div
@@ -22,35 +22,35 @@ export default function CTA() {
             className="absolute -bottom-24 left-0 h-56 w-56 rounded-full bg-electric-yellow/10 blur-3xl"
           />
           <div className="max-w-3xl">
-            <p className="text-electric-yellow font-black uppercase tracking-[0.28em] text-xs mb-4">
+            <p className="text-electric-yellow font-black uppercase tracking-[0.28em] text-[10px] sm:text-xs mb-4">
               Ready To Talk
             </p>
-            <h2 className="text-5xl md:text-7xl font-black text-navy-900 leading-[0.9] tracking-tighter mb-8 relative z-10">
-              LET’S POWER YOUR <br />
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-navy-900 leading-[1] sm:leading-[0.9] tracking-tighter mb-8 relative z-10">
+              LET’S POWER YOUR <br className="hidden sm:block" />
               <span className="text-electric-yellow">NEXT PROJECT</span>
             </h2>
-            <p className="text-xl text-navy-900/70 mb-12 leading-relaxed relative z-10">
+            <p className="text-lg sm:text-xl text-navy-900/70 mb-10 sm:mb-12 leading-relaxed relative z-10">
               Contact our engineering team today to discuss your commercial electrical 
               requirements and discover why ETS is the trusted choice for industry leaders.
             </p>
             
-            <div className="flex flex-wrap gap-6 relative z-10">
-              <motion.div whileHover={{ y: -4, scale: 1.01 }} whileTap={{ scale: 0.98 }}>
+            <div className="flex flex-col sm:flex-row gap-6 relative z-10">
+              <motion.div whileHover={{ y: -4, scale: 1.01 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
                 <Link
                   href="/contact"
-                  className="bg-electric-yellow text-white px-10 h-14 rounded-full font-black inline-flex items-center gap-3 hover:bg-charcoal-800 transition-all shadow-2xl shadow-electric-yellow/20 whitespace-nowrap"
+                  className="bg-electric-yellow text-white px-10 h-14 rounded-full font-black flex items-center justify-center gap-3 hover:bg-charcoal-800 transition-all shadow-2xl shadow-electric-yellow/20 whitespace-nowrap"
                 >
                   START A CONVERSATION
                   <ArrowRight size={20} />
                 </Link>
               </motion.div>
               <div className="flex items-center gap-4 bg-white/50 backdrop-blur-sm px-6 py-4 rounded-xl border border-navy-900/10">
-                <div className="w-12 h-12 bg-navy-900/5 rounded-full flex items-center justify-center">
-                  <Phone size={20} className="text-electric-yellow" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-navy-900/5 rounded-full flex items-center justify-center">
+                  <Phone size={18} className="text-electric-yellow" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-navy-900/50 mb-1">Call Us Directly</p>
-                  <p className="text-navy-900 font-black text-lg">01553 631 759</p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-navy-900/50 mb-1">Call Us Directly</p>
+                  <p className="text-navy-900 font-black text-base sm:text-lg">01553 631 759</p>
                 </div>
               </div>
             </div>

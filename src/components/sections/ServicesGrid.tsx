@@ -86,29 +86,29 @@ export default function ServicesGrid() {
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/30 to-transparent" />
       <div className="absolute top-24 left-[8%] h-40 w-40 rounded-full bg-electric-yellow/10 blur-3xl pointer-events-none" />
       <div className="absolute bottom-16 right-[10%] h-52 w-52 rounded-full bg-charcoal-900/8 blur-3xl pointer-events-none" />
-      <Reveal className="container mx-auto px-6 mb-16">
-        <div className="surface-card relative overflow-hidden rounded-[2.5rem] border border-white/50 px-8 py-10 md:px-12 md:py-12 lg:px-14 lg:py-14">
+      <Reveal className="container mx-auto px-6 mb-12 sm:mb-16">
+        <div className="surface-card relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] border border-white/50 px-6 py-8 md:px-12 md:py-12 lg:px-14 lg:py-14">
           <div className="absolute inset-0 bg-gradient-to-br from-electric-yellow/10 via-transparent to-charcoal-900/5" />
           <div className="absolute inset-x-12 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/70 to-transparent" />
-          <div className="relative z-10 grid gap-10 lg:grid-cols-[minmax(0,1.45fr)_minmax(280px,0.8fr)] lg:items-end">
+          <div className="relative z-10 grid gap-8 lg:gap-10 lg:grid-cols-[minmax(0,1.45fr)_minmax(280px,0.8fr)] lg:items-end">
             <div>
-              <span className="text-electric-yellow font-black tracking-widest uppercase text-sm mb-4 block">
+              <span className="text-electric-yellow font-black tracking-widest uppercase text-[10px] sm:text-sm mb-4 block">
                 OUR CORE CAPABILITIES
               </span>
-              <h2 className="text-3xl md:text-5xl lg:text-[4.2rem] font-black text-navy-900 mb-6 tracking-[-0.04em] leading-[0.92]">
+              <h2 className="text-3xl sm:text-5xl lg:text-[4.2rem] font-black text-navy-900 mb-6 tracking-[-0.04em] leading-[0.92]">
                 ENGINEERING
                 <span className="block text-navy-900/42">EXCELLENCE</span>
               </h2>
-              <p className="max-w-2xl text-navy-900/65 leading-relaxed text-base md:text-lg">
+              <p className="max-w-2xl text-navy-900/65 leading-relaxed text-sm sm:text-base md:text-lg">
                 Every service line is delivered with engineering rigor, compliance discipline,
                 and a premium finish that reflects the ETS standard across commercial and
                 industrial environments.
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8 flex flex-wrap gap-2 sm:gap-3">
                 {["8 Core Service Lines", "Compliance-Led Delivery", "Commercial & Industrial"].map((item) => (
                   <div
                     key={item}
-                    className="rounded-full border border-white/55 bg-white/45 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-navy-900/65"
+                    className="rounded-full border border-white/55 bg-white/45 px-3 py-1.5 sm:px-4 sm:py-2 text-[9px] sm:text-xs font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-navy-900/65"
                   >
                     {item}
                   </div>
@@ -116,21 +116,21 @@ export default function ServicesGrid() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-white/50 bg-white/35 p-6 md:p-7 backdrop-blur-md">
-              <p className="text-xs font-black uppercase tracking-[0.26em] text-navy-900/45">
+            <div className="rounded-[1.5rem] sm:rounded-[2rem] border border-white/50 bg-white/35 p-5 sm:p-7 backdrop-blur-md">
+              <p className="text-[10px] font-black uppercase tracking-[0.26em] text-navy-900/45 mb-4">
                 Premium Delivery
               </p>
-              <div className="mt-6 space-y-5">
+              <div className="space-y-4 sm:space-y-5">
                 <div>
-                  <p className="text-3xl md:text-4xl font-black text-electric-yellow">End-to-End</p>
-                  <p className="mt-2 text-sm leading-relaxed text-navy-900/60">
+                  <p className="text-2xl sm:text-4xl font-black text-electric-yellow leading-none">End-to-End</p>
+                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-navy-900/60">
                     From design and fit-out through maintenance, testing, and infrastructure support.
                   </p>
                 </div>
                 <div className="h-px w-full bg-gradient-to-r from-electric-yellow/0 via-electric-yellow/35 to-electric-yellow/0" />
                 <div>
-                  <p className="text-3xl md:text-4xl font-black text-navy-900">High Reliability</p>
-                  <p className="mt-2 text-sm leading-relaxed text-navy-900/60">
+                  <p className="text-2xl sm:text-4xl font-black text-navy-900 leading-none">High Reliability</p>
+                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-navy-900/60">
                     Built for demanding sites where uptime, safety, and clean execution matter.
                   </p>
                 </div>

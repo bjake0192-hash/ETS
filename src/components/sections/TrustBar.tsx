@@ -36,25 +36,25 @@ export default function TrustBar() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10"
+          className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 relative z-10"
         >
           {trustItems.map((item, index) => (
             <motion.div
               key={index}
               variants={fadeUp}
-              className="group relative surface-card rounded-[1.75rem] border border-white/45 p-6 flex flex-col items-start gap-4 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-electric-yellow/55"
+              className="group relative surface-card rounded-[1.25rem] sm:rounded-[1.75rem] border border-white/45 p-4 sm:p-6 flex flex-col items-start gap-3 sm:gap-4 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-electric-yellow/55"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/50 to-background/30 group-hover:from-electric-yellow/15 group-hover:via-background/60 group-hover:to-background/50 transition-colors duration-500" />
               <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-electric-yellow/65 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="relative z-10 h-16 w-full flex items-center justify-start mb-2">
+              <div className="relative z-10 h-12 sm:h-16 w-full flex items-center justify-start mb-1 sm:mb-2">
                 <img 
                   src={item.image} 
                   alt={item.title}
-                  className="max-h-full max-w-[80%] object-contain mix-blend-multiply opacity-80 group-hover:opacity-100 transition-opacity" 
+                  className="max-h-full max-w-[90%] sm:max-w-[80%] object-contain mix-blend-multiply opacity-80 group-hover:opacity-100 transition-opacity" 
                 />
               </div>
-              <div className="relative z-10">
-                <p className="text-xs text-navy-900/60 leading-snug">{item.description}</p>
+              <div className="relative z-10 hidden sm:block">
+                <p className="text-[10px] sm:text-xs text-navy-900/60 leading-snug">{item.description}</p>
               </div>
             </motion.div>
           ))}

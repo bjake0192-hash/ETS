@@ -47,7 +47,7 @@ export default function Hero() {
   }, [certifications.length, words.length]);
 
   return (
-    <section className="relative min-h-[100svh] flex items-center overflow-hidden pt-32 sm:pt-36 pb-36">
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden pt-28 sm:pt-36 pb-24 sm:pb-36">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0 bg-background">
         <img 
@@ -62,12 +62,12 @@ export default function Hero() {
         <motion.div
           animate={{ x: [0, 24, 0], y: [0, -18, 0] }}
           transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-10 left-[8%] h-56 w-56 rounded-full bg-electric-yellow/12 blur-3xl"
+          className="absolute -top-10 left-[8%] h-56 w-56 rounded-full bg-electric-yellow/12 blur-3xl hidden sm:block"
         />
         <motion.div
           animate={{ x: [0, -30, 0], y: [0, 18, 0] }}
           transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-[12%] right-[10%] h-72 w-72 rounded-full bg-charcoal-900/10 blur-3xl"
+          className="absolute bottom-[12%] right-[10%] h-72 w-72 rounded-full bg-charcoal-900/10 blur-3xl hidden sm:block"
         />
       </div>
 
@@ -81,9 +81,9 @@ export default function Hero() {
           <div className="max-w-4xl">
             <motion.h1
               variants={fadeUp}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.6rem] xl:text-[5.2rem] font-black text-navy-900 leading-[0.9] tracking-[-0.04em] mb-6 flex flex-col items-start"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.6rem] xl:text-[5.2rem] font-black text-navy-900 leading-[1] sm:leading-[0.9] tracking-[-0.04em] mb-6 flex flex-col items-start"
             >
-              <span className="inline-grid overflow-hidden h-[1em]">
+              <span className="inline-grid overflow-hidden h-[1.1em] sm:h-[1em]">
                 <AnimatePresence mode="popLayout">
                   <motion.span
                     key={wordIndex}
@@ -102,52 +102,44 @@ export default function Hero() {
             </motion.h1>
             <motion.p
               variants={fadeUp}
-              className="text-lg md:text-xl text-navy-900/70 max-w-2xl mb-8 leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-navy-900/70 max-w-2xl mb-8 leading-relaxed"
             >
               Delivering high-end electrical engineering and infrastructure solutions
               for the UK's most demanding commercial and industrial environments.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="flex flex-wrap gap-4 items-stretch mb-8">
-              <motion.div whileHover={{ y: -4 }} whileTap={{ scale: 0.98 }}>
+            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-10">
+              <motion.div whileHover={{ y: -4 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
                 <Link
                   href="/services"
-                  className="group bg-electric-yellow text-white px-8 h-14 rounded-full font-black inline-flex items-center justify-center gap-2 hover:bg-charcoal-800 transition-all shadow-[0_18px_40px_rgba(168,97,38,0.24)] whitespace-nowrap"
+                  className="group bg-electric-yellow text-white px-8 h-14 rounded-full font-black flex items-center justify-center gap-2 hover:bg-charcoal-800 transition-all shadow-[0_18px_40px_rgba(168,97,38,0.24)] whitespace-nowrap"
                 >
                   OUR SERVICES
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
-              {/* <motion.div whileHover={{ y: -4 }} whileTap={{ scale: 0.98 }}>
-                <Link
-                  href="/projects"
-                  className="surface-card px-8 h-14 rounded-full border border-navy-900/15 text-navy-900 font-black hover:bg-navy-900/5 transition-all inline-flex items-center justify-center whitespace-nowrap"
-                >
-                  VIEW PROJECTS
-                </Link>
-              </motion.div> */}
             </motion.div>
             
           </div>
 
-          <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-center justify-between gap-6 w-full mt-8 relative">
+          <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-center justify-between gap-8 w-full mt-12 relative">
             {/* Soft lighter overlay behind the entire bottom row to illuminate text and logos */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[350%] bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.65)_0%,_rgba(255,255,255,0)_75%)] pointer-events-none -z-10" />
             
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] font-bold uppercase tracking-widest text-navy-900/80 relative z-10">
-              <span className="flex items-center gap-1.5"><span className="text-electric-yellow">25+</span> Years Experience</span>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-3 text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-navy-900/80 relative z-10 max-w-xl">
+              <span className="flex items-center gap-1.5 whitespace-nowrap"><span className="text-electric-yellow">25+</span> Years Experience</span>
               <span className="text-navy-900/30 hidden sm:inline">•</span>
-              <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> NICEIC Approved</span>
+              <span className="flex items-center gap-1.5 whitespace-nowrap"><span className="text-electric-yellow">✓</span> NICEIC Approved</span>
               <span className="text-navy-900/30 hidden sm:inline">•</span>
-              <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> Certified SafeContractor</span>
+              <span className="flex items-center gap-1.5 whitespace-nowrap"><span className="text-electric-yellow">✓</span> SafeContractor</span>
               <span className="text-navy-900/30 hidden sm:inline">•</span>
-              <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> Commercial Specialists</span>
+              <span className="flex items-center gap-1.5 whitespace-nowrap"><span className="text-electric-yellow">✓</span> Commercial Specialists</span>
               <span className="text-navy-900/30 hidden lg:inline">•</span>
-              <span className="flex items-center gap-1.5"><span className="text-electric-yellow">✓</span> Nationwide Projects</span>
+              <span className="flex items-center gap-1.5 whitespace-nowrap"><span className="text-electric-yellow">✓</span> Nationwide Projects</span>
             </div>
             
-            <div className="flex items-center shrink-0 relative z-10">
-              <span className="relative h-16 w-44 flex items-center justify-center overflow-hidden z-10">
+            <div className="flex items-center shrink-0 relative z-10 self-start md:self-center">
+              <span className="relative h-14 w-36 sm:h-16 sm:w-44 flex items-center justify-center overflow-hidden z-10">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={activeCert}
