@@ -81,7 +81,7 @@ export default function Hero() {
           <div className="max-w-4xl">
             <motion.h1
               variants={fadeUp}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.6rem] xl:text-[5.2rem] font-black text-navy-900 leading-[1] sm:leading-[0.9] tracking-[-0.04em] mb-6 flex flex-col items-start"
+              className="text-[2.6rem] xs:text-5xl sm:text-6xl md:text-7xl lg:text-[4.6rem] xl:text-[5.2rem] font-black text-navy-900 leading-[1.05] sm:leading-[0.9] tracking-[-0.04em] mb-6 flex flex-col items-start"
             >
               <span className="inline-grid overflow-hidden h-[1.1em] sm:h-[1em]">
                 <AnimatePresence mode="popLayout">
@@ -102,52 +102,52 @@ export default function Hero() {
             </motion.h1>
             <motion.p
               variants={fadeUp}
-              className="text-base sm:text-lg md:text-xl text-navy-900/70 max-w-2xl mb-8 leading-relaxed"
+              className="text-[15px] sm:text-lg md:text-xl text-navy-900/70 max-w-2xl mb-10 leading-relaxed"
             >
               Delivering high-end electrical engineering and infrastructure solutions
               for the UK's most demanding commercial and industrial environments.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-10">
+            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mb-14">
               <motion.div whileHover={{ y: -4 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
                 <Link
                   href="/services"
-                  className="group bg-electric-yellow text-white px-8 h-14 rounded-full font-black flex items-center justify-center gap-2 hover:bg-charcoal-800 transition-all shadow-[0_18px_40px_rgba(168,97,38,0.24)] whitespace-nowrap"
+                  className="group bg-electric-yellow text-white px-10 h-16 rounded-full font-black flex items-center justify-center gap-3 hover:bg-charcoal-800 transition-all shadow-[0_18px_40px_rgba(168,97,38,0.24)] whitespace-nowrap"
                 >
                   OUR SERVICES
-                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
             </motion.div>
             
           </div>
 
-          <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-center justify-between gap-8 w-full mt-12 relative">
+          <motion.div variants={fadeUp} className="flex flex-col md:flex-row md:items-center justify-between gap-10 w-full mt-12 relative">
             {/* Soft lighter overlay behind the entire bottom row to illuminate text and logos */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[350%] bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.65)_0%,_rgba(255,255,255,0)_75%)] pointer-events-none -z-10" />
             
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-3 text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-navy-900/80 relative z-10 max-w-xl">
-              <span className="flex items-center gap-1.5 whitespace-nowrap"><span className="text-electric-yellow">25+</span> Years Experience</span>
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-4 text-[11px] sm:text-[11px] font-black uppercase tracking-[0.15em] sm:tracking-widest text-navy-900/80 relative z-10 max-w-2xl">
+              <span className="flex items-center gap-2 whitespace-nowrap"><span className="text-electric-yellow">25+</span> Years Experience</span>
               <span className="text-navy-900/30 hidden sm:inline">•</span>
-              <span className="flex items-center gap-1.5 whitespace-nowrap"><span className="text-electric-yellow">✓</span> NICEIC Approved</span>
+              <span className="flex items-center gap-2 whitespace-nowrap"><span className="text-electric-yellow">✓</span> NICEIC Approved</span>
               <span className="text-navy-900/30 hidden sm:inline">•</span>
-              <span className="flex items-center gap-1.5 whitespace-nowrap"><span className="text-electric-yellow">✓</span> SafeContractor</span>
+              <span className="flex items-center gap-2 whitespace-nowrap"><span className="text-electric-yellow">✓</span> SafeContractor</span>
               <span className="text-navy-900/30 hidden sm:inline">•</span>
-              <span className="flex items-center gap-1.5 whitespace-nowrap"><span className="text-electric-yellow">✓</span> Commercial Specialists</span>
+              <span className="flex items-center gap-2 whitespace-nowrap"><span className="text-electric-yellow">✓</span> Commercial Specialists</span>
               <span className="text-navy-900/30 hidden lg:inline">•</span>
-              <span className="flex items-center gap-1.5 whitespace-nowrap"><span className="text-electric-yellow">✓</span> Nationwide Projects</span>
+              <span className="flex items-center gap-2 whitespace-nowrap"><span className="text-electric-yellow">✓</span> Nationwide Projects</span>
             </div>
             
-            <div className="flex items-center shrink-0 relative z-10 self-start md:self-center">
-              <span className="relative h-14 w-36 sm:h-16 sm:w-44 flex items-center justify-center overflow-hidden z-10">
+            <div className="flex items-center shrink-0 relative z-10 self-start md:self-center bg-white/40 backdrop-blur-sm p-3 rounded-2xl border border-white/60 sm:bg-transparent sm:backdrop-blur-none sm:p-0 sm:border-none">
+              <span className="relative h-12 w-32 sm:h-16 sm:w-44 flex items-center justify-center overflow-hidden z-10">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={activeCert}
                     src={certifications[activeCert].src}
                     alt={certifications[activeCert].name}
-                    initial={{ opacity: 0, y: 5 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -5 }}
+                    initial={{ opacity: 0, scale: 0.9, y: 5 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.9, y: -5 }}
                     transition={{ duration: 0.3 }}
                     className="absolute w-full h-full object-contain"
                   />

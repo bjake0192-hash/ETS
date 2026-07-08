@@ -42,16 +42,16 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-[#fbf8f4] p-12 rounded-3xl border border-navy-900/10 relative overflow-hidden">
-      <h3 className="text-2xl font-black text-navy-900 mb-8 uppercase tracking-tight">Send a Message</h3>
+    <div className="bg-[#fbf8f4] p-8 sm:p-12 rounded-[2rem] border border-navy-900/10 relative overflow-hidden">
+      <h3 className="text-xl sm:text-2xl font-black text-navy-900 mb-8 uppercase tracking-tight">Send a Message</h3>
       
       {status === "success" ? (
-        <div className="flex flex-col items-center justify-center text-center py-12 space-y-4">
+        <div className="flex flex-col items-center justify-center text-center py-8 sm:py-12 space-y-4">
           <div className="w-16 h-16 bg-electric-yellow/20 rounded-full flex items-center justify-center mb-2">
             <CheckCircle2 size={32} className="text-electric-yellow" />
           </div>
-          <h4 className="text-2xl font-black text-navy-900">Message Sent</h4>
-          <p className="text-navy-900/70">
+          <h4 className="text-xl sm:text-2xl font-black text-navy-900">Message Sent</h4>
+          <p className="text-sm sm:text-base text-navy-900/70">
             Thank you for reaching out. A member of our engineering team will be in touch shortly.
           </p>
           <button 
@@ -63,48 +63,48 @@ export default function ContactForm() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <label htmlFor="name" className="text-xs font-black text-navy-900/50 uppercase tracking-widest">Full Name</label>
+              <label htmlFor="name" className="text-[10px] font-black text-navy-900/50 uppercase tracking-widest">Full Name</label>
               <input 
                 type="text" 
                 id="name"
                 name="name"
                 required
-                className="w-full bg-background border border-navy-900/20 rounded-lg px-4 py-3 text-navy-900 focus:border-electric-yellow outline-none transition-colors" 
+                className="w-full bg-background border border-navy-900/20 rounded-xl px-4 py-3 text-navy-900 focus:border-electric-yellow outline-none transition-colors text-sm sm:text-base" 
                 placeholder="John Doe" 
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="company" className="text-xs font-black text-navy-900/50 uppercase tracking-widest">Company</label>
+              <label htmlFor="company" className="text-[10px] font-black text-navy-900/50 uppercase tracking-widest">Company</label>
               <input 
                 type="text" 
                 id="company"
                 name="company"
-                className="w-full bg-background border border-navy-900/20 rounded-lg px-4 py-3 text-navy-900 focus:border-electric-yellow outline-none transition-colors" 
+                className="w-full bg-background border border-navy-900/20 rounded-xl px-4 py-3 text-navy-900 focus:border-electric-yellow outline-none transition-colors text-sm sm:text-base" 
                 placeholder="Acme Corp" 
               />
             </div>
           </div>
           <div className="space-y-2">
-            <label htmlFor="email" className="text-xs font-black text-navy-900/50 uppercase tracking-widest">Email Address</label>
+            <label htmlFor="email" className="text-[10px] font-black text-navy-900/50 uppercase tracking-widest">Email Address</label>
             <input 
               type="email" 
               id="email"
               name="email"
               required
-              className="w-full bg-background border border-navy-900/20 rounded-lg px-4 py-3 text-navy-900 focus:border-electric-yellow outline-none transition-colors" 
+              className="w-full bg-background border border-navy-900/20 rounded-xl px-4 py-3 text-navy-900 focus:border-electric-yellow outline-none transition-colors text-sm sm:text-base" 
               placeholder="john@company.com" 
             />
           </div>
           <div className="space-y-2">
-            <label htmlFor="message" className="text-xs font-black text-navy-900/50 uppercase tracking-widest">Message</label>
+            <label htmlFor="message" className="text-[10px] font-black text-navy-900/50 uppercase tracking-widest">Message</label>
             <textarea 
               id="message"
               name="message"
               required
-              rows={5} 
-              className="w-full bg-background border border-navy-900/20 rounded-lg px-4 py-3 text-navy-900 focus:border-electric-yellow outline-none transition-colors resize-none" 
+              rows={4} 
+              className="w-full bg-background border border-navy-900/20 rounded-xl px-4 py-3 text-navy-900 focus:border-electric-yellow outline-none transition-colors resize-none text-sm sm:text-base" 
               placeholder="How can we help with your project?"
             ></textarea>
           </div>

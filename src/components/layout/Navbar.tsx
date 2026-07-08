@@ -40,12 +40,12 @@ export default function Navbar() {
       )}
     >
       <div className="container mx-auto px-6">
-        <div className="surface-card rounded-full border border-white/40 px-5 sm:px-7 py-3 flex items-center justify-between gap-6">
-          <Link href="/" className="group" aria-label="ETS Home">
+        <div className="surface-card rounded-full border border-white/40 px-4 sm:px-7 py-2.5 sm:py-3 flex items-center justify-between gap-4 sm:gap-6">
+          <Link href="/" className="group shrink-0" aria-label="ETS Home">
             <motion.img
               src="/etslogo.png"
               alt="ETS logo"
-              className="h-14 sm:h-16 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+              className="h-10 sm:h-16 w-auto object-contain transition-transform group-hover:scale-[1.02]"
               whileHover={{ scale: 1.03 }}
             />
           </Link>
@@ -83,15 +83,23 @@ export default function Navbar() {
             </motion.div>
           </div>
 
-          {/* Mobile Toggle */}
-          <motion.button
-            whileTap={{ scale: 0.94 }}
-            className="md:hidden text-navy-900"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </motion.button>
+          {/* Mobile Right Side */}
+          <div className="flex md:hidden items-center gap-3">
+            <Link
+              href="/contact"
+              className="bg-electric-yellow text-white px-4 py-2 rounded-full font-black text-[10px] uppercase tracking-wider shadow-lg shadow-electric-yellow/20 active:scale-95 transition-transform"
+            >
+              Get Quote
+            </Link>
+            <motion.button
+              whileTap={{ scale: 0.94 }}
+              className="text-navy-900 p-1"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </motion.button>
+          </div>
         </div>
       </div>
 
